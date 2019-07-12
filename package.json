@@ -29,6 +29,6 @@
     ]
   },
   "devDependencies": {
-    "CETEIcean": "^1.0.0"
+    "CETEIcean": "^1.0.1"
   }
 }
