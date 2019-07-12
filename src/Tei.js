@@ -10,6 +10,7 @@ class Tei extends React.Component {
   constructor(props) {
     super(props);
     this.state.processing = true
+    this.teiDataContainer = React.createRef()
   }
 
   componentDidMount() {
@@ -18,13 +19,17 @@ class Tei extends React.Component {
 
   componentDidUpdate() {
     if (!this.state.processing) {
-      this.refs.tei.innerHTML = ''
-      this.refs.tei.appendChild(this.state.teiData)
+      this.teiDataContainer.current.innerHTML = ''
+      this.teiDataContainer.current.appendChild(this.state.teiData)
     }
   }
 
   async getTEI() {
     const ct = new CETEI()
+    
+    // Override default CETEI TEI behaviors.
+    ct.addBehavior('tei', 'teiHeader', undefined)
+
     const teiData = await ct.getHTML5('data/example.xml')
     this.setState({
       processing: false,
@@ -33,7 +38,7 @@ class Tei extends React.Component {
   }
 
   render() {
-    return <div ref="tei" className="Tei">Loading ...</div>
+    return <div ref={this.teiDataContainer} className="Tei">Loading ...</div>
   }
 }
 
