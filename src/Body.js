@@ -1,10 +1,9 @@
 import React from 'react'
-import './App.scss'
-import Body from './Body'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import Tei from './Tei'
+import Nav from './Nav'
 
 
-class App extends React.Component {
+class Body extends React.Component {
   constructor(props) {
     super(props)
     this.views = [
@@ -30,16 +29,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Route path="/:view?" exact component={(p) => 
-            <Body 
-              defaultView={this.defaultView}
-              view={p.match.params.view} />} />
-        </div>
-      </Router>
+      <>
+        <Nav views={this.views} activeView={this.props.view} defaultView={this.defaultView}/>
+        <Tei 
+            defaultView={this.props.defaultView}
+            view={this.props.view} 
+            allowedViews={this.views} />
+      </>
     )
   } 
 }
 
-export default App;
+export default Body
