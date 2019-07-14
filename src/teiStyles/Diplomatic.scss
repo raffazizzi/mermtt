@@ -1,6 +1,74 @@
 .Diplomatic {
+
     tei-TEI {
-        background-color: red;
+        padding: .5em;
+		border: 1px solid orange;
     }
+	tei-abbr {
+		display:inline;  
+	}
+	tei-am {
+		display:inline;
+	}
+	tei-c[type=dropcap]	{
+		float: left;
+	}
+	tei-choice tei-orig {
+		display: inline;
+	}
+	tei-choice tei-reg {
+		display: none;
+	}	
+	tei-choice tei-sic {
+		display: inline;
+	}
+	tei-choice tei-corr {
+		display: none;
+	}
+	tei-ex {
+		display: none;
+	}
+	tei-expan {
+		display: none;
+	}
+	
+
 }
+
+
+/* to be considered */
+/* 
+
+tei-add[place=above] {
+  vertical-align: super;
+}
+tei-add[place=inline]:before {
+  content: "";
+}
+tei-add[place=inline]:after {
+  content: "";
+}
+tei-add[place=below] {
+  vertical-align: sub;
+}
+tei-cb {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+tei-cb:before {
+  content: "[column break]";
+}
+tei-emph {
+  font-style: italic;
+}
+tei-explicit {
+  font-style: italic;
+}
+tei-figure {
+		display: none;
+}
+
+*/
+
 
