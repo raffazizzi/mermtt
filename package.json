@@ -80,7 +80,9 @@
     ]
   },
   "devDependencies": {
-    "CETEIcean": "^1.0.1"
+    "CETEIcean": "^1.0.1",
+    "node-sass": "^4.12.0",
+    "react-router-dom": "^5.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
