@@ -13,30 +13,6 @@
   width: 42em; 
 }
 
-/* HACKS! REVIEW THESE */
-tei-g[n=hack] {
-  letter-spacing: -.3em;
-  }
-tei-am[n=hack]:after {
-  letter-spacing: .1em;
-  content: "\00a0"
-}
-  /* ------ two pairs of normal+combined characters */
-tei-g[n=hack1] {                         /* sets the distance between the second letter amd the first */
-  letter-spacing: -.2em;
-}
-tei-am[n=hack1]:after {
-  letter-spacing: -.1em;
-  content: "\00a0";
-}
-tei-g[n=hack2] {
-  letter-spacing: -.4em;     /* the distance betwwen the two macrons, that should form one undistinguished line */
-}
-tei-am[n=hack2]:after {
-  letter-spacing: .2em;
-  content: "\00a0";
-}
-
 /* A */
 tei-ab {
   display: block;
@@ -44,45 +20,22 @@ tei-ab {
   margin-bottom: 1em;
 }
 tei-abbr {
-  display:inline;  
+	/* Empty Rule Set */  
 }
 tei-accMat {
-  display: block;
-}
-tei-accMat:before {
-  content: "accompanying materials: ";
+	/* Empty Rule Set */
 }
 tei-acquisition {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-tei-acquisition:before {
-  font-weight: bold;
-  content: "acquisition";
+	/* Empty Rule Set */
 }
 tei-activity {
-  display: block;
-}
-tei-activity:before {
-  content: "activity: ";
+	/* Empty Rule Set */
 }
 tei-actor {
   /* Empty Rule Set */
 }
-/* add */
-/* Could add other [place=] variations */
-tei-add[place=above] {
-  vertical-align: super;
-}
-tei-add[place=inline]:before {
-  content: "«";
-}
-tei-add[place=inline]:after {
-  content: "»";
-}
-tei-add[place=below] {
-  vertical-align: sub;
+tei-add {
+  /* Empty Rule Set */
 }
 tei-addName {
   /* Empty Rule Set */
@@ -96,17 +49,11 @@ tei-additional {
 tei-additions {
   display: block;
 }
-tei-additions:before {
-  content: "Significant additions within the document: ";
-}
 tei-addrLine {
   display: block;
 }
 tei-address {
   /* Empty Rule Set */
-}
-tei-address[data-tei-rend~="block"], addresss[data-tei-rendition~="#block"] {
-  display: block;
 }
 tei-adminInfo {
   display: block;
@@ -130,7 +77,7 @@ tei-altIdentifier {
   /* Empty Rule Set */
 }
 tei-am {
-  display:inline;
+  /* Empty Rule Set */
 }
 tei-analytic {
   /* Empty Rule Set */
@@ -141,20 +88,15 @@ tei-anchor {
 tei-app {
   /* Empty Rule Set */
 }
+/* GDB: support to be added */
 tei-app tei-note {
-  display: none;
+  display: block;
 }
 tei-appInfo {
   display: block;
 }
-tei-appInfo:before {
-  content: "Application information: ";
-}
 tei-application {
   display: block;
-}
-tei-application:after {
-  content: " " attr(version);
 }
 tei-arc {
   /* Empty Rule Set */
@@ -163,10 +105,7 @@ tei-argument {
   display: block;
 }
 tei-att {
-  font-family: Courier,monospace;
-}
-tei-att:before {
-  content: "@";
+  /* Empty Rule Set */
 }
 tei-attDef {
   /* Empty Rule Set */
@@ -181,8 +120,9 @@ tei-author {
   /* Empty Rule Set */
 }
 tei-titleStmt > tei-author {
-  display: block;
-  margin-bottom: 1em;
+	font-weight:bold;
+	display: block;
+	margin: .5em 0 1em 0;
 }
 tei-authority {
   /* Empty Rule Set */
@@ -198,7 +138,9 @@ tei-publicationStmt > tei-availability[data-tei-status]:before {
   font-weight: bold;
   content: "Availability (" attr(status) "): ";
 }
+
 /* B */
+
 tei-back {
   display: block;
   margin-top: 35px;
@@ -268,15 +210,12 @@ tei-broadcast {
 tei-byline {
   /* Empty Rule Set */
 }
-/* c */
+
+/* C */
+
 tei-c {
   /* Empty Rule Set */
 }
-
-tei-c[type=dropcap] {
-  float: left;
-}
-
 tei-cRefPattern {
   display: none;
 }
@@ -291,24 +230,17 @@ tei-caption {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-tei-case[data-tei-value]:before {
-  font-weight: bold;
-  content: attr(value) " ";
+tei-case{
+  /* Empty Rule Set */
 }
 tei-castGroup {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /* Empty Rule Set */
 }
 tei-castItem {
-  display: list-item;
+  /* Empty Rule Set */
 }
 tei-castList {
-  display: block;
-  list-style-type: none;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 2em;
+  /* Empty Rule Set */
 }
 tei-catDesc {
   /* Empty Rule Set */
@@ -320,26 +252,13 @@ tei-category {
   /* Empty Rule Set */
 }
 tei-cb {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-cb:before {
-  content: "[column break]";
+  /* Empty Rule Set */
 }
 tei-cell {
   display: table-cell;
   padding: 1em 1.5em 1em 1em;
-  /*
-tei-border-left: 2px solid @border-color;
-tei-border-top:2px solid @border-color;
-tei-*/
   border: 1px dotted #aaaaaa;
   width: 100%;
-}
-/* for cell or row with @role = label */
-tei-[data-tei-role=label] {
-  font-weight: bold;
 }
 tei-certainty {
   /* Empty Rule Set */
@@ -359,22 +278,9 @@ tei-charName {
 tei-charProp {
   /* Empty Rule Set */
 }
-
-tei-choice tei-orig {
-  display: inline;
+tei-choice {
+  /* Empty Rule Set */
 }
-tei-choice tei-reg {
-  display: none;
-}
-
-tei-choice tei-sic {
-  display: inline;
-}
-tei-choice tei-corr {
-  display: none;
-}
-
-
 tei-cit {
   /* Empty Rule Set */
 }
@@ -397,29 +303,16 @@ tei-classes {
   /* Empty Rule Set */
 }
 tei-climate {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-climate:before {
-  font-weight: bold;
-  content: "Climate: ";
+  /* Empty Rule Set */
 }
 tei-closer {
   /* Empty Rule Set */
 }
 tei-code {
-  font-family: Courier,monospace;
+  /* Empty Rule Set */
 }
-/* jawalsh:
-For things like collation, condition, etc. that can have text or paragraphs as
-children, we should use margins, when the content is text, and no margins when there
-are child paragraphs (or other block elements). Otherwise we end up with double
-margins. */
 tei-collation {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /* Empty Rule Set */
 }
 tei-collection {
   /* Empty Rule Set */
@@ -428,42 +321,16 @@ tei-colloc {
   /* Empty Rule Set */
 }
 tei-colophon {
-  font-style: italic;
+  /* Empty Rule Set */
 }
 tei-cond {
   /* Empty Rule Set */
 }
 tei-condition {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /* Empty Rule Set */
 }
 tei-constitution {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-constitution:before {
-  font-weight: bold;
-  content: "Constitution: ";
-}
-tei-constitution[data-tei-type] {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-constitution[data-tei-type]:before {
-  font-weight: bold;
-  content: "Constitution (" attr(type) "): ";
-}
-tei-constitution[data-tei-type=frags] {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-constitution[data-tei-type=frags]:before {
-  font-weight: bold;
-  content: "Constitution (fragments): ";
+  /* Empty Rule Set */
 }
 tei-constraint {
   /* Empty Rule Set */
@@ -474,8 +341,6 @@ tei-constraintSpec {
 tei-content {
   /* Empty Rule Set */
 }
-/* jawalsh:
-tei-Need to discuss and coordinate handling of sic/corr, abbr/expan, and orig/reg */
 tei-corr {
   /* Empty Rule Set */
 }
@@ -488,67 +353,59 @@ tei-country {
 tei-creation {
   /* Empty Rule Set */
 }
-/*jawalsh:
-tei-Need to handle attributes for custEvent. All the att.datable* attributes will be tricky.
-tei-custodialHist and custEvent may normally be hidden along with other header metadata, but
-tei-we'll have other datable elements that may be tricky. */
 tei-custEvent {
-  display: list-item;
+  /* Empty Rule Set */
 }
 tei-custodialHist {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /* Empty Rule Set */
 }
-/* d */
+
+/* D */
+
 tei-date[data-tei-when]:empty:before {
   content: attr(when);
 }
-/* e */
+
+/* E */
+
 tei-editionStmt {
   display:block;
 }
 tei-egXML {
   display: block;
-  font-size: 80%;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 1px solid #aaaaaa;
-  margin-top: .75em;
-  margin-bottom: .75em;
-  padding-top: .75em;
-  padding-bottom: .75em;
   font-family: monospace;
   white-space: pre;
 }
 tei-emph {
-  font-style: italic;
+  /* Empty Rule Set */
 }
 tei-encodingDesc {
   display: none;
 }
 tei-epigraph {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /* Empty Rule Set */
 }
 tei-ex {
-  display: none;
+  /* Empty Rule Set */
 }
 tei-expan {
-  display: none;
+  /* Empty Rule Set */
 }
 tei-explicit {
-  font-style: italic;
+  /* Empty Rule Set */
 }
-tei-fileDesc > extent {
-  display: none;
-}
-/* f */
+
+/* F */
 tei-figure {
-  display: none;
+  /* Empty Rule Set */
 }
-/* g */
+tei-fileDesc {
+  /* Empty Rule Set */
+}
+
+
+/* G */
+
 tei-g {
   /* Empty Rule Set */
 }
