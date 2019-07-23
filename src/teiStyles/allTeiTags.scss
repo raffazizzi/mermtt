@@ -1,0 +1,868 @@
+@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
+
+/* unclear why this is not tei-tei? */
+.Tei {
+  margin: 0;
+  padding: 0;
+  margin-left: 2em;
+  margin-right: 4em;
+  padding: 2.5em;
+  font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
+  font-size: 12pt; 
+  background-color: #fff; 
+  color: #292929;
+  width: 42em; 
+}
+
+
+/*  ELEMENTS IN USE */
+
+tei-am {  
+	display:none;  
+	}
+
+tei-author {
+	font-weight:bold;
+	display: block;
+	margin: .5em 0 1em 0;
+}
+
+tei-back {
+  display: block;
+  margin-top: 35px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #292929;
+  border-top: 2px solid #cdcdcd;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  line-height: 16px;
+  font-size: 12pt;
+}
+
+tei-body {
+	display:block;   
+	}
+
+tei-char {  
+	display:none;  
+	}
+
+tei-charDecl {  
+	display:none;  
+	}
+
+tei-choice {  
+	display:inline;  
+	}
+
+tei-corr {  
+	display:inline;  
+	}
+
+tei-desc  {  
+	display:none;  
+	}
+
+tei-div  {  
+	display:block;  
+	}
+
+tei-encodingDesc {
+  display: none;
+}
+
+tei-ex {
+	display:inline;  
+	}
+
+tei-expan {  
+	display:inline;  
+	}
+
+tei-g {  
+	display:inline;  
+	}
+
+tei-gi {  
+	display:none;  
+	}
+
+tei-glyph {  
+	display:none;  
+	}
+
+tei-glyphName {  
+	display:none;  
+	}
+
+tei-graphic {  
+	display:inline;  
+	}
+
+tei-label {  
+	display:inline;  
+	}
+
+tei-lb {  
+	display:inline;  
+  	}
+
+tei-name {  
+	display:inline;  
+	}
+
+tei-notatedMusic {  
+	display:inline;    
+	}
+
+tei-note {  
+	display:inline;  
+	}
+
+tei-orig 
+	{  
+	display:inline;  
+	}
+
+tei-p {
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  text-align: justify;
+}
+
+tei-pb 	{  
+	display:inline; 
+	}
+
+tei-publicationStmt {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+tei-ref {
+  color: #5f0000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+tei-reg {  
+	display:inline;
+}
+
+tei-rendition {  
+	display:inline;
+}
+
+tei-resp {  
+	display:inline;
+}
+
+tei-respStmt {
+  display: block;
+}
+
+tei-seg {
+  outline: 1px solid transparent;
+}
+
+tei-sic {  
+	display:inline;
+}
+
+
+tei-sourceDesc {
+  display: none;
+}
+
+tei-supplied {  
+	display:inline;
+}
+
+tei-TEI {
+  display: block;
+}
+
+tei-teiHeader {
+  display: block; 
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid Grey;
+}
+
+tei-term {  
+	display:inline;
+}
+
+tei-text {
+  display: block;
+  line-height: 1.5;
+  padding-left: 2em;
+}
+
+tei-titleStmt {  
+	display:block;
+}
+
+tei-titleStmt > tei-title {
+  display: block;
+  font-family: Arvo, sans-serif;
+  font-weight: normal;
+  font-weight: bold !important;
+  font-size: 150%;
+}
+
+
+
+
+
+/*  END OF ACTIVE STYLESHEET */
+
+
+
+/*  LIST OF ALL TEI ELEMENTS (P5 v3.6.0). Empty Rule Set for those that are not in use */
+
+/* A */
+
+tei-ab { /* Empty Rule Set */ }
+tei-abbr { /* Empty Rule Set */ }
+tei-abstract { /* Empty Rule Set */ }
+tei-accMat { /* Empty Rule Set */ }
+tei-acquisition { /* Empty Rule Set */ }
+tei-activity { /* Empty Rule Set */ }
+tei-actor { /* Empty Rule Set */ }
+tei-add { /* Empty Rule Set */ }
+tei-additional { /* Empty Rule Set */ }
+tei-additions { /* Empty Rule Set */ }
+tei-addName { /* Empty Rule Set */ }
+tei-address { /* Empty Rule Set */ }
+tei-addrLine { /* Empty Rule Set */ }
+tei-addSpan { /* Empty Rule Set */ }
+tei-adminInfo { /* Empty Rule Set */ }
+tei-affiliation {  /* Empty Rule Set */ }
+tei-age {  /* Empty Rule Set */ }
+tei-alt {  /* Empty Rule Set */ }
+tei-alternate {  /* Empty Rule Set */ }
+tei-altGrp {  /* Empty Rule Set */ }
+tei-altIdent {  /* Empty Rule Set */ }
+tei-altIdentifier {  /* Empty Rule Set */ }
+/* tei-am */
+tei-analytic {  /* Empty Rule Set */ }
+tei-anchor {  /* Empty Rule Set */ }
+tei-annotationBlock {  /* Empty Rule Set */ }
+tei-anyElement {  /* Empty Rule Set */ }
+tei-app {  /* Empty Rule Set */ }
+tei-appInfo {  /* Empty Rule Set */ }
+tei-application {  /* Empty Rule Set */ }
+tei-arc {  /* Empty Rule Set */  }
+tei-argument {  /* Empty Rule Set */ }
+tei-att {  /* Empty Rule Set */  }
+tei-attDef {  /* Empty Rule Set */  }
+tei-attList {  /* Empty Rule Set */  }
+tei-attRef {  /* Empty Rule Set */  }
+/* tei-author */
+tei-authority {  /* Empty Rule Set */  }
+tei-availability {  /* Empty Rule Set */  }
+
+/* B */
+
+/* tei-back */
+tei-bibl {  /* Empty Rule Set */  }
+tei-biblFull {  /* Empty Rule Set */  }
+tei-biblScope {  /* Empty Rule Set */  }
+tei-biblStruct {  /* Empty Rule Set */  }
+tei-bicond {  /* Empty Rule Set */  }
+tei-binary {  /* Empty Rule Set */  } 
+tei-binaryObject {  /* Empty Rule Set */  }
+tei-binding {  /* Empty Rule Set */  }
+tei-bindingDesc {  /* Empty Rule Set */  }
+tei-birth {  /* Empty Rule Set */  }
+tei-bloc {  /* Empty Rule Set */   }
+/* tei-body */
+tei-broadcast {  /* Empty Rule Set */  }
+tei-byline {  /* Empty Rule Set */  }
+
+/* C */
+
+/* tei-c */
+tei-cRefPattern {  /* Empty Rule Set */  }
+tei-caesura {  /* Empty Rule Set */  }
+tei-camera {  /* Empty Rule Set */  }
+tei-caption {  /* Empty Rule Set */  }
+tei-case{  /* Empty Rule Set */  }
+tei-castGroup {  /* Empty Rule Set */  }
+tei-castItem {  /* Empty Rule Set */  }
+tei-castList {  /* Empty Rule Set */  }
+tei-catDesc {  /* Empty Rule Set */  }
+tei-catRef {  /* Empty Rule Set */  }
+tei-category {  /* Empty Rule Set */  }
+tei-cb {  /* Empty Rule Set */  }
+tei-cell {  /* Empty Rule Set */  }
+tei-certainty {  /* Empty Rule Set */  }
+tei-change {  /* Empty Rule Set */  }
+tei-channel {  /* Empty Rule Set */  }
+/* tei-char */
+/* tei-charDecl */
+tei-charName {  /* Empty Rule Set */  }
+tei-charProp {  /* Empty Rule Set */  }
+/* tei-choice */
+/* tei-corr */
+tei-cit {  /* Empty Rule Set */  }
+tei-cl {  /* Empty Rule Set */  }
+tei-classCode {  /* Empty Rule Set */  }
+tei-classDecl {  /* Empty Rule Set */  }
+tei-classRef {  /* Empty Rule Set */  }
+tei-classSpec {  /* Empty Rule Set */  }
+tei-classes {  /* Empty Rule Set */  }
+tei-climate {  /* Empty Rule Set */  }
+tei-closer {  /* Empty Rule Set */  }
+tei-code {  /* Empty Rule Set */  }
+tei-collation {  /* Empty Rule Set */  }
+tei-collection {  /* Empty Rule Set */  }
+tei-colloc {  /* Empty Rule Set */  }
+tei-colophon {  /* Empty Rule Set */  }
+tei-cond {  /* Empty Rule Set */  }
+tei-condition {  /* Empty Rule Set */  }
+tei-constitution {  /* Empty Rule Set */  }
+tei-constraint {  /* Empty Rule Set */  }
+tei-constraintSpec {  /* Empty Rule Set */  }
+tei-content {  /* Empty Rule Set */  }
+tei-corr {  /* Empty Rule Set */  }
+tei-correction {  /* Empty Rule Set */  }
+tei-country {  /* Empty Rule Set */  }
+tei-creation {  /* Empty Rule Set */  }
+tei-custEvent {  /* Empty Rule Set */  }
+tei-custodialHist {  /* Empty Rule Set */  }
+
+/* D */
+
+tei-damage {  /* Empty Rule Set */  }
+tei-damageSpan  {  /* Empty Rule Set */  }
+tei-dataFacet  {  /* Empty Rule Set */  }
+tei-dataRef  {  /* Empty Rule Set */  }
+tei-dataSpec  {  /* Empty Rule Set */  }
+tei-datatype  {  /* Empty Rule Set */  }
+tei-date  {  /* Empty Rule Set */  }
+tei-dateline  {  /* Empty Rule Set */  }
+tei-death  {  /* Empty Rule Set */  }
+tei-decoDesc  {  /* Empty Rule Set */  }
+tei-decoNote  {  /* Empty Rule Set */  }
+tei-def  {  /* Empty Rule Set */  }
+tei-default  {  /* Empty Rule Set */  }
+tei-defaultVal  {  /* Empty Rule Set */  }
+tei-del  {  /* Empty Rule Set */  }
+tei-delSpan  {  /* Empty Rule Set */  }
+tei-depth  {  /* Empty Rule Set */  }
+tei-derivation  {  /* Empty Rule Set */  }
+/* tei-desc */
+tei-dictScrap  {  /* Empty Rule Set */  }
+tei-dim  {  /* Empty Rule Set */  }
+tei-dimensions  {  /* Empty Rule Set */  }
+tei-distinct  {  /* Empty Rule Set */  }
+tei-distributor  {  /* Empty Rule Set */  }
+tei-district  {  /* Empty Rule Set */  }
+/* tei-div */
+tei-div1  {  /* Empty Rule Set */  }
+tei-div2  {  /* Empty Rule Set */  }
+tei-div3  {  /* Empty Rule Set */  }
+tei-div4  {  /* Empty Rule Set */  }
+tei-div5  {  /* Empty Rule Set */  }
+tei-div6  {  /* Empty Rule Set */  }
+tei-div7  {  /* Empty Rule Set */  }
+tei-divGen  {  /* Empty Rule Set */  }
+tei-docAuthor  {  /* Empty Rule Set */  }
+tei-docDate  {  /* Empty Rule Set */  }
+tei-docEdition  {  /* Empty Rule Set */  }
+tei-docImprint  {  /* Empty Rule Set */  }
+tei-docTitle  {  /* Empty Rule Set */  }
+tei-domain  {  /* Empty Rule Set */  }
+
+/* E */
+
+tei-edition {  /* Empty Rule Set */  }
+tei-editionStmt {  /* Empty Rule Set */  }
+tei-editor {  /* Empty Rule Set */  }
+tei-editorialDecl {  /* Empty Rule Set */  }
+tei-education {  /* Empty Rule Set */  }
+tei-eg {  /* Empty Rule Set */  }
+tei-egXML {  /* Empty Rule Set */  }
+tei-eLeaf {  /* Empty Rule Set */  }
+tei-elementRef {  /* Empty Rule Set */  }
+tei-elementSpec {  /* Empty Rule Set */  }
+tei-email {  /* Empty Rule Set */  }
+tei-emph {  /* Empty Rule Set */  }
+tei-empty {  /* Empty Rule Set */  }
+/* tei-encodingDesc */
+tei-entry {  /* Empty Rule Set */  }
+tei-entryFree {  /* Empty Rule Set */  }
+tei-epigraph {  /* Empty Rule Set */  }
+tei-epilogue {  /* Empty Rule Set */  }
+tei-equipment {  /* Empty Rule Set */  }
+tei-equiv {  /* Empty Rule Set */  }
+tei-eTree {  /* Empty Rule Set */  }
+tei-etym {  /* Empty Rule Set */  }
+tei-event {  /* Empty Rule Set */  }
+/* tei-ex */
+tei-exemplum {  /* Empty Rule Set */  }
+/* tei-expan */
+tei-explicit {  /* Empty Rule Set */  }
+tei-extent {  /* Empty Rule Set */  }
+
+/* F */
+
+tei-f {  /* Empty Rule Set */  }
+tei-facsimile {  /* Empty Rule Set */  }
+tei-factuality {  /* Empty Rule Set */  }
+tei-faith {  /* Empty Rule Set */  }
+tei-fDecl {  /* Empty Rule Set */  }
+tei-fDescr {  /* Empty Rule Set */  }
+tei-figDesc {  /* Empty Rule Set */  }
+/* tei-figure */ 
+/* tei-fileDesc */
+tei-filiation {  /* Empty Rule Set */  }
+tei-finalRubric {  /* Empty Rule Set */  }
+tei-fLib {  /* Empty Rule Set */  }
+tei-floatingText {  /* Empty Rule Set */  }
+tei-floruit {  /* Empty Rule Set */  }
+tei-foliation {  /* Empty Rule Set */  }
+tei-foreign {  /* Empty Rule Set */  }
+tei-forename {  /* Empty Rule Set */  }
+tei-forest {  /* Empty Rule Set */  }
+tei-form {  /* Empty Rule Set */  }
+tei-formula {  /* Empty Rule Set */  }
+tei-front {  /* Empty Rule Set */  }
+tei-fs {  /* Empty Rule Set */  }
+tei-fsConstraints {  /* Empty Rule Set */  }
+tei-fsdDecl {  /* Empty Rule Set */  }
+tei-fsDecl {  /* Empty Rule Set */  }
+tei-fsDescr {  /* Empty Rule Set */  }
+tei-fsdLink {  /* Empty Rule Set */  }
+tei-funder {  /* Empty Rule Set */  }
+tei-fvLib {  /* Empty Rule Set */  }
+tei-fw {  /* Empty Rule Set */  }
+
+/* G */
+
+/* tei-g */
+tei-gap {  /* Empty Rule Set */  }
+tei-gb {  /* Empty Rule Set */  }
+tei-gen {  /* Empty Rule Set */  }
+tei-genName {  /* Empty Rule Set */  }
+tei-geo {  /* Empty Rule Set */  }
+tei-geoDecl {  /* Empty Rule Set */  }
+tei-geogFeat {  /* Empty Rule Set */  }
+tei-geogName {  /* Empty Rule Set */  }
+/* tei-gi */
+tei-gloss {  /* Empty Rule Set */  }
+/* tei-glyph */
+/* tei-glyphName */
+tei-gram {  /* Empty Rule Set */  }
+tei-gramGrp {  /* Empty Rule Set */  }
+tei-graph {  /* Empty Rule Set */  }
+/* tei-graphic  */
+tei-group {  /* Empty Rule Set */  }
+
+/* H */
+
+tei-handDesc {  /* Empty Rule Set */  }
+tei-handNote {  /* Empty Rule Set */  }
+tei-handNotes {  /* Empty Rule Set */  }
+tei-handShift {  /* Empty Rule Set */  }
+tei-head {  /* Empty Rule Set */  }
+tei-headItem {  /* Empty Rule Set */  }
+tei-headLabel {  /* Empty Rule Set */  }
+tei-height {  /* Empty Rule Set */  }
+tei-heraldry {  /* Empty Rule Set */  }
+tei-hi {  /* Empty Rule Set */  }
+tei-history {  /* Empty Rule Set */  }
+tei-hom {  /* Empty Rule Set */  }
+tei-hyph {  /* Empty Rule Set */  }
+tei-hyphenation {  /* Empty Rule Set */  }
+
+/* I */
+
+tei-ident {  /* Empty Rule Set */  }
+tei-idno {  /* Empty Rule Set */  }
+tei-if {  /* Empty Rule Set */  }
+tei-iff {  /* Empty Rule Set */  }
+tei-imprimatur {  /* Empty Rule Set */  }
+tei-imprint {  /* Empty Rule Set */  }
+tei-incident {  /* Empty Rule Set */  }
+tei-incipit {  /* Empty Rule Set */  }
+tei-index {  /* Empty Rule Set */  }
+tei-iNode {  /* Empty Rule Set */  }
+tei-institution {  /* Empty Rule Set */  }
+tei-interaction {  /* Empty Rule Set */  }
+tei-interp {  /* Empty Rule Set */  }
+tei-interpGrp {  /* Empty Rule Set */  }
+tei-interpretation {  /* Empty Rule Set */  }
+tei-item {  /* Empty Rule Set */  }
+tei-iType {  /* Empty Rule Set */  }
+
+/* J */
+
+tei-join {  /* Empty Rule Set */  }
+tei-joinGrp {  /* Empty Rule Set */  }
+
+/* K */
+
+tei-keywords {  /* Empty Rule Set */  }
+tei-kinesic {  /* Empty Rule Set */  }
+
+/* L */
+
+tei-l {  /* Empty Rule Set */  }
+/* tei-label */
+tei-lacunaEnd {  /* Empty Rule Set */  }
+tei-lacunaStart {  /* Empty Rule Set */  }
+tei-lang {  /* Empty Rule Set */  }
+tei-langKnowledge {  /* Empty Rule Set */  }
+tei-langKnown {  /* Empty Rule Set */  }
+tei-language {  /* Empty Rule Set */  }
+tei-langUsage {  /* Empty Rule Set */  }
+tei-layout {  /* Empty Rule Set */  }
+tei-layoutDesc {  /* Empty Rule Set */  }
+/* tei-lb */
+tei-lbl {  /* Empty Rule Set */  }
+tei-leaf {  /* Empty Rule Set */  }
+tei-lem {  /* Empty Rule Set */  }
+tei-lg {  /* Empty Rule Set */  }
+tei-licence {  /* Empty Rule Set */  }
+tei-line {  /* Empty Rule Set */  }
+tei-link {  /* Empty Rule Set */  }
+tei-linkGrp {  /* Empty Rule Set */  }
+tei-list {  /* Empty Rule Set */  }
+tei-listApp {  /* Empty Rule Set */  }
+tei-listBibl {  /* Empty Rule Set */  }
+tei-listChange {  /* Empty Rule Set */  }
+tei-listEvent {  /* Empty Rule Set */  }
+tei-listForest {  /* Empty Rule Set */  }
+tei-listNym {  /* Empty Rule Set */  }
+tei-listObject {  /* Empty Rule Set */  }
+tei-listOrg {  /* Empty Rule Set */  }
+tei-listPerson {  /* Empty Rule Set */  }
+tei-listPlace {  /* Empty Rule Set */  }
+tei-listPrefixDef {  /* Empty Rule Set */  }
+tei-listRef {  /* Empty Rule Set */  }
+tei-listRelation {  /* Empty Rule Set */  }
+tei-listTranspose {  /* Empty Rule Set */  }
+tei-listWit {  /* Empty Rule Set */  }
+tei-locale {  /* Empty Rule Set */  }
+tei-localName {  /* Empty Rule Set */  }
+tei-location {  /* Empty Rule Set */  }
+tei-locus {  /* Empty Rule Set */  }
+tei-locusGrp {  /* Empty Rule Set */  }
+
+/* M */
+
+tei-m {  /* Empty Rule Set */  }
+tei-macroRef {  /* Empty Rule Set */  }
+tei-macroSpec {  /* Empty Rule Set */  }
+tei-mapping {  /* Empty Rule Set */  }
+tei-material {  /* Empty Rule Set */  }
+tei-measure {  /* Empty Rule Set */  }
+tei-measureGrp {  /* Empty Rule Set */  }
+tei-media {  /* Empty Rule Set */  }
+tei-meeting {  /* Empty Rule Set */  }
+tei-memberOf {  /* Empty Rule Set */  }
+tei-mentioned {  /* Empty Rule Set */  }
+tei-metamark {  /* Empty Rule Set */  }
+tei-metDecl {  /* Empty Rule Set */  }
+tei-metSym {  /* Empty Rule Set */  }
+tei-milestone {  /* Empty Rule Set */  }
+tei-mod {  /* Empty Rule Set */  }
+tei-model {  /* Empty Rule Set */  }
+tei-modelGrp {  /* Empty Rule Set */  }
+tei-modelSequence {  /* Empty Rule Set */  }
+tei-moduleRef {  /* Empty Rule Set */  }
+tei-moduleSpec {  /* Empty Rule Set */  }
+tei-monogr {  /* Empty Rule Set */  }
+tei-mood {  /* Empty Rule Set */  }
+tei-move {  /* Empty Rule Set */  }
+tei-msContents {  /* Empty Rule Set */  }
+tei-msDesc {  /* Empty Rule Set */  }
+tei-msFrag {  /* Empty Rule Set */  }
+tei-msIdentifier {  /* Empty Rule Set */  }
+tei-msItem {  /* Empty Rule Set */  }
+tei-msItemStruct {  /* Empty Rule Set */  }
+tei-msName {  /* Empty Rule Set */  }
+tei-msPart {  /* Empty Rule Set */  }
+tei-musicNotation {  /* Empty Rule Set */  }
+
+/* N */
+
+/* tei-name */
+tei-nameLink {  /* Empty Rule Set */  }
+tei-namespace {  /* Empty Rule Set */  }
+tei-nationality {  /* Empty Rule Set */  }
+tei-node {  /* Empty Rule Set */  }
+tei-normalization {  /* Empty Rule Set */  }
+/* tei-notatedMusic */
+tei-note {  /* Empty Rule Set */  }
+tei-notesStmt {  /* Empty Rule Set */  }
+tei-num {  /* Empty Rule Set */  }
+tei-number {  /* Empty Rule Set */  }
+tei-numeric {  /* Empty Rule Set */  }
+tei-nym {  /* Empty Rule Set */  }
+
+/* O */
+
+tei-object {  /* Empty Rule Set */  }
+tei-objectDesc {  /* Empty Rule Set */  }
+tei-objectIdentifier {  /* Empty Rule Set */  }
+tei-objectName {  /* Empty Rule Set */  }
+tei-objectType {  /* Empty Rule Set */  }
+tei-occupation {  /* Empty Rule Set */  }
+tei-offset {  /* Empty Rule Set */  }
+tei-opener {  /* Empty Rule Set */  }
+tei-oRef {  /* Empty Rule Set */  }
+tei-org {  /* Empty Rule Set */  }
+tei-orgName {  /* Empty Rule Set */  }
+/* tei-orig */
+tei-origDate {  /* Empty Rule Set */  }
+tei-origin {  /* Empty Rule Set */  }
+tei-origPlace {  /* Empty Rule Set */  }
+tei-orth {  /* Empty Rule Set */  }
+tei-outputRendition {  /* Empty Rule Set */  }
+
+/* P */
+
+/* tei-p */
+tei-param {  /* Empty Rule Set */  }
+tei-paramList {  /* Empty Rule Set */  }
+tei-paramSpec {  /* Empty Rule Set */  }
+tei-particDesc {  /* Empty Rule Set */  }
+tei-path {  /* Empty Rule Set */  }
+tei-pause {  /* Empty Rule Set */  }
+/* tei-pb */
+tei-pc {  /* Empty Rule Set */  }
+tei-per {  /* Empty Rule Set */  }
+tei-performance {  /* Empty Rule Set */  }
+tei-persName {  /* Empty Rule Set */  }
+tei-person {  /* Empty Rule Set */  }
+tei-persona {  /* Empty Rule Set */  }
+tei-personGrp {  /* Empty Rule Set */  }
+tei-phr {  /* Empty Rule Set */  }
+tei-physDesc {  /* Empty Rule Set */  }
+tei-place {  /* Empty Rule Set */  }
+tei-placeName {  /* Empty Rule Set */  }
+tei-population {  /* Empty Rule Set */  }
+tei-pos {  /* Empty Rule Set */  }
+tei-postBox {  /* Empty Rule Set */  }
+tei-postCode {  /* Empty Rule Set */  }
+tei-postscript {  /* Empty Rule Set */  }
+tei-precision {  /* Empty Rule Set */  }
+tei-pRef {  /* Empty Rule Set */  }
+tei-prefixDef {  /* Empty Rule Set */  }
+tei-preparedness {  /* Empty Rule Set */  }
+tei-principal {  /* Empty Rule Set */  }
+tei-profileDesc {  /* Empty Rule Set */  }
+tei-projectDesc {  /* Empty Rule Set */  }
+tei-prologue {  /* Empty Rule Set */  }
+tei-pron {  /* Empty Rule Set */  }
+tei-provenance {  /* Empty Rule Set */  }
+tei-ptr {  /* Empty Rule Set */  }
+/* tei-publicationStmt */
+tei-publisher {  /* Empty Rule Set */  }
+tei-pubPlace {  /* Empty Rule Set */  }
+tei-punctuation {  /* Empty Rule Set */  }
+tei-purpose {  /* Empty Rule Set */  }
+
+/* Q */
+
+tei-q {  /* Empty Rule Set */  }
+tei-quotation {  /* Empty Rule Set */  }
+tei-quote {  /* Empty Rule Set */  }
+
+/* R */
+
+tei-rdg {  /* Empty Rule Set */  }
+tei-rdgGrp {  /* Empty Rule Set */  }
+tei-re {  /* Empty Rule Set */  }
+tei-recordHist {  /* Empty Rule Set */  }
+tei-recording {  /* Empty Rule Set */  }
+tei-recordingStmt {  /* Empty Rule Set */  }
+tei-redo {  /* Empty Rule Set */  }
+/* tei-ref */
+tei-refsDecl {  /* Empty Rule Set */  }
+tei-refState {  /* Empty Rule Set */  }
+/* tei-reg */
+tei-region {  /* Empty Rule Set */  }
+tei-relatedItem {  /* Empty Rule Set */  }
+tei-relation {  /* Empty Rule Set */  }
+tei-remarks {  /* Empty Rule Set */  }
+/* tei-rendition */
+tei-repository {  /* Empty Rule Set */  }
+tei-residence {  /* Empty Rule Set */  }
+/* tei-resp */
+tei-respons {  /* Empty Rule Set */  }
+/* tei-respStmt */
+tei-restore {  /* Empty Rule Set */  }
+tei-retrace {  /* Empty Rule Set */  }
+tei-revisionDesc {  /* Empty Rule Set */  }
+tei-rhyme {  /* Empty Rule Set */  }
+tei-role {  /* Empty Rule Set */  }
+tei-roleDesc {  /* Empty Rule Set */  }
+tei-roleName {  /* Empty Rule Set */  }
+tei-root {  /* Empty Rule Set */  }
+tei-row {  /* Empty Rule Set */  }
+tei-rs {  /* Empty Rule Set */  }
+tei-rubric {  /* Empty Rule Set */  }
+
+/* S */
+
+tei-s {  /* Empty Rule Set */  }
+tei-said {  /* Empty Rule Set */  }
+tei-salute {  /* Empty Rule Set */  }
+tei-samplingDecl {  /* Empty Rule Set */  }
+tei-schemaRef {  /* Empty Rule Set */  }
+tei-schemaSpec {  /* Empty Rule Set */  }
+tei-scriptDesc {  /* Empty Rule Set */  }
+tei-scriptNote {  /* Empty Rule Set */  }
+tei-scriptStmt {  /* Empty Rule Set */  }
+tei-seal {  /* Empty Rule Set */  }
+tei-sealDesc {  /* Empty Rule Set */  }
+tei-secFol {  /* Empty Rule Set */  }
+tei-secl {  /* Empty Rule Set */  }
+/* tei-seg */
+tei-segmentation {  /* Empty Rule Set */  }
+tei-sense {  /* Empty Rule Set */  }
+tei-sequence {  /* Empty Rule Set */  }
+tei-series {  /* Empty Rule Set */  }
+tei-seriesStmt {  /* Empty Rule Set */  }
+tei-set {  /* Empty Rule Set */  }
+tei-setting {  /* Empty Rule Set */  }
+tei-settingDesc {  /* Empty Rule Set */  }
+tei-settlement {  /* Empty Rule Set */  }
+tei-sex {  /* Empty Rule Set */  }
+tei-shift {  /* Empty Rule Set */  }
+/* tei-sic */
+tei-signatures {  /* Empty Rule Set */  }
+tei-signed {  /* Empty Rule Set */  }
+tei-soCalled {  /* Empty Rule Set */  }
+tei-socecStatus {  /* Empty Rule Set */  }
+tei-sound {  /* Empty Rule Set */  }
+tei-source {  /* Empty Rule Set */  }
+/* tei-sourceDesc */
+tei-sourceDoc {  /* Empty Rule Set */  }
+tei-sp {  /* Empty Rule Set */  }
+tei-space {  /* Empty Rule Set */  }
+tei-span {  /* Empty Rule Set */  }
+tei-spanGrp {  /* Empty Rule Set */  }
+tei-speaker {  /* Empty Rule Set */  }
+tei-specDesc {  /* Empty Rule Set */  }
+tei-specGrp {  /* Empty Rule Set */  }
+tei-specGrpRef {  /* Empty Rule Set */  }
+tei-specList {  /* Empty Rule Set */  }
+tei-spGrp {  /* Empty Rule Set */  }
+tei-sponsor {  /* Empty Rule Set */  }
+tei-stage {  /* Empty Rule Set */  }
+tei-stamp {  /* Empty Rule Set */  }
+tei-state {  /* Empty Rule Set */  }
+tei-stdVals {  /* Empty Rule Set */  }
+tei-street {  /* Empty Rule Set */  }
+tei-stress {  /* Empty Rule Set */  }
+tei-string {  /* Empty Rule Set */  }
+tei-styleDefDecl {  /* Empty Rule Set */  }
+tei-subc {  /* Empty Rule Set */  }
+tei-subst {  /* Empty Rule Set */  }
+tei-substJoin {  /* Empty Rule Set */  }
+tei-summary {  /* Empty Rule Set */  }
+tei-superEntry {  /* Empty Rule Set */  }
+/* tei-supplied */
+tei-support {  /* Empty Rule Set */  }
+tei-supportDesc {  /* Empty Rule Set */  }
+tei-surface {  /* Empty Rule Set */  }
+tei-surfaceGrp {  /* Empty Rule Set */  }
+tei-surname {  /* Empty Rule Set */  }
+tei-surplus {  /* Empty Rule Set */  }
+tei-surrogates {  /* Empty Rule Set */  }
+tei-syll {  /* Empty Rule Set */  }
+tei-symbol {  /* Empty Rule Set */  }
+
+/* T */
+
+tei-table {  /* Empty Rule Set */  }
+tei-tag {  /* Empty Rule Set */  }
+tei-tagsDecl {  /* Empty Rule Set */  }
+tei-tagUsage {  /* Empty Rule Set */  }
+tei-taxonomy {  /* Empty Rule Set */  }
+tei-tech {  /* Empty Rule Set */  }
+/* tei-TEI */
+tei-teiCorpus {  /* Empty Rule Set */  }
+/* tei-teiHeader */
+/* tei-term */
+tei-terrain {  /* Empty Rule Set */  }
+/* tei-text */
+tei-textClass {  /* Empty Rule Set */  }
+tei-textDesc {  /* Empty Rule Set */  }
+tei-textLang {  /* Empty Rule Set */  }
+tei-textNode {  /* Empty Rule Set */  }
+tei-then {  /* Empty Rule Set */  }
+tei-time {  /* Empty Rule Set */  }
+tei-timeline {  /* Empty Rule Set */  }
+/* tei-title */
+tei-titlePage {  /* Empty Rule Set */  }
+tei-titlePart {  /* Empty Rule Set */  }
+/* tei-titleStmt */
+tei-tns {  /* Empty Rule Set */  }
+tei-trailer {  /* Empty Rule Set */  }
+tei-trait {  /* Empty Rule Set */  }
+tei-transcriptionDesc {  /* Empty Rule Set */  }
+tei-transpose {  /* Empty Rule Set */  }
+tei-tree {  /* Empty Rule Set */  }
+tei-triangle {  /* Empty Rule Set */  }
+tei-typeDesc {  /* Empty Rule Set */  }
+tei-typeNote {  /* Empty Rule Set */  }
+
+/* U */
+
+tei-u {  /* Empty Rule Set */  }
+tei-unclear {  /* Empty Rule Set */  }
+tei-undo {  /* Empty Rule Set */  }
+tei-unicodeName {  /* Empty Rule Set */  }
+tei-unit {  /* Empty Rule Set */  }
+tei-unitDecl {  /* Empty Rule Set */  }
+tei-unitDef {  /* Empty Rule Set */  }
+tei-usg {  /* Empty Rule Set */  }
+
+/* V */
+
+tei-val {  /* Empty Rule Set */  }
+tei-valDesc {  /* Empty Rule Set */  }
+tei-valItem {  /* Empty Rule Set */  }
+tei-valList {  /* Empty Rule Set */  }
+tei-vAlt {  /* Empty Rule Set */  }
+tei-value {  /* Empty Rule Set */  }
+tei-variantEncoding {  /* Empty Rule Set */  }
+tei-vColl {  /* Empty Rule Set */  }
+tei-vDefault {  /* Empty Rule Set */  }
+tei-view {  /* Empty Rule Set */  }
+tei-vLabel {  /* Empty Rule Set */  }
+tei-vMerge {  /* Empty Rule Set */  }
+tei-vNot {  /* Empty Rule Set */  }
+tei-vocal {  /* Empty Rule Set */  }
+tei-vRange {  /* Empty Rule Set */  }
+
+/* W */ 
+
+tei-w {  /* Empty Rule Set */  }
+tei-watermark {  /* Empty Rule Set */  }
+tei-when {  /* Empty Rule Set */  }
+tei-width {  /* Empty Rule Set */  }
+tei-wit {  /* Empty Rule Set */  }
+tei-witDetail {  /* Empty Rule Set */  }
+tei-witEnd {  /* Empty Rule Set */  }
+tei-witness {  /* Empty Rule Set */  }
+tei-witStart {  /* Empty Rule Set */  }
+tei-writing {  /* Empty Rule Set */  }
+
+/* X */
+
+tei-xenoData {  /* Empty Rule Set */  }
+tei-xr {  /* Empty Rule Set */  }
+
+/* Z */
+
+tei-zone {  /* Empty Rule Set */  }

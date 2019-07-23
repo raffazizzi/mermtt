@@ -1,18 +1,18 @@
 .Diplomatic {
 
     tei-TEI {
-        padding: .5em;
+        padding: 1em;
 		border: 1px solid orange;
     }
-	tei-abbr {
-		display:inline;  
-	}
+
 	tei-am {
 		display:inline;
 	}
+
 	tei-c[type=dropcap]	{
 		float: left;
 	}
+
 	tei-choice tei-orig {
 		display: inline;
 	}
@@ -25,13 +25,84 @@
 	tei-choice tei-corr {
 		display: none;
 	}
+
 	tei-ex {
 		display: none;
 	}
 	tei-expan {
 		display: none;
 	}
-	
+
+	tei-lb {
+		color:black;
+	}
+	tei-lb:after {
+		content: '\a';
+		white-space: pre;
+	}
+	tei-lb[type="hyphen"]::before {
+		content: " -";
+		display:inline;
+		letter-spacing: -.2em;
+	}
+	tei-lb[type="wronghyphen"]::before {
+		content: " -";
+		display:inline;
+		letter-spacing: -.1em;
+	}
+
+	tei-notatedMusic {
+		padding: 0;
+		font-size:12px;
+		font-family: courier, fixed, monospace;
+	}
+	tei-notatedMusic:before {
+		text-align:left;
+		font-size: 22px;
+		content: '\1D11A \1D11A \1D11A \1D11A  ';
+	}
+	tei-notatedMusic label {
+		padding:0 30px 0 10px;
+	}
+	tei-notatedMusic ref {
+		color:white;
+		font-size:11px;
+	}
+	tei-notatedMusic ref:before {
+		color:black;
+		font-size:16px;
+		background-color:mistyrose;
+	content: " ♫ "
+	}
+	tei-notatedMusic ref:hover {
+		color:black;
+	}
+	tei-notatedMusic ref seg {
+		font-weight:bold;
+	text-decoration:underline;
+	}
+
+	tei-pb {
+		color: gray;
+		text-align: left;
+		text-indent: -3em;
+		font-size: 80%;
+		float: left;
+	}
+	tei-pb::before {
+		content: "\00a0" attr(n);
+		padding: .1em 0 .1em 0;
+		margin-top: .1em;
+		border-top: 1px solid grey;
+		border-left: 1px solid grey;
+	}
+	tei-unclear {
+		background-color: mistyrose;
+	}
+
+
+
+/* end of class */
 
 }
 
