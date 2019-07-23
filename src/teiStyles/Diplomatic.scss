@@ -1,37 +1,68 @@
 .Diplomatic {
 
-    tei-TEI {
-        padding: 1em;
-		border: 1px solid orange;
-    }
 
-	tei-am {
-		display:inline;
+/*  LAYOUT and divisions */   /* none */
+
+/*  HEADER   */      /* none */
+
+/* TEXT DETAILS */
+
+
+	tei-pb {
+		color: gray;
+		text-align: left;
+		text-indent: -3em;
+		font-size: 80%;
+		float: left;
+	}
+	tei-pb::before {
+		content: "\00a0" attr(n);
+		padding: .1em 0 .1em 0;
+		margin-top: .1em;
+		border-top: 1px solid grey;
+		border-left: 1px solid grey;
 	}
 
 	tei-c[type=dropcap]	{
 		float: left;
 	}
 
+
+	tei-choice tei-corr {
+		display: none;
+	}
+	tei-choice tei-sic {
+		display: inline;
+	}
 	tei-choice tei-orig {
 		display: inline;
 	}
 	tei-choice tei-reg {
 		display: none;
 	}	
-	tei-choice tei-sic {
-		display: inline;
-	}
-	tei-choice tei-corr {
-		display: none;
+
+	tei-supplied { 
+		display:none;
 	}
 
+	tei-g { 
+		display:inline;
+	}
+	tei-am {
+		display:inline;
+	}
 	tei-ex {
 		display: none;
 	}
 	tei-expan {
 		display: none;
 	}
+
+	
+	tei-unclear {
+		background-color: mistyrose;
+	}
+
 
 	tei-lb {
 		color:black;
@@ -51,12 +82,19 @@
 		letter-spacing: -.1em;
 	}
 
+	tei-term { 
+		display:inline
+	}
+
+
+
+
 	tei-notatedMusic {
 		padding: 0;
 		font-size:12px;
 		font-family: courier, fixed, monospace;
 	}
-	tei-notatedMusic:before {
+	tei-notatedMusic::before {
 		text-align:left;
 		font-size: 22px;
 		content: '\1D11A \1D11A \1D11A \1D11A  ';
@@ -68,78 +106,39 @@
 		color:white;
 		font-size:11px;
 	}
-	tei-notatedMusic ref:before {
+	tei-notatedMusic ref::before {
 		color:black;
 		font-size:16px;
 		background-color:mistyrose;
-	content: " ♫ "
+		content: " ♫ "
 	}
 	tei-notatedMusic ref:hover {
 		color:black;
 	}
 	tei-notatedMusic ref seg {
 		font-weight:bold;
-	text-decoration:underline;
+		text-decoration:underline;
 	}
 
-	tei-pb {
-		color: gray;
-		text-align: left;
-		text-indent: -3em;
-		font-size: 80%;
-		float: left;
+	tei-graphic { 
+		display:inline;
 	}
-	tei-pb::before {
-		content: "\00a0" attr(n);
-		padding: .1em 0 .1em 0;
-		margin-top: .1em;
-		border-top: 1px solid grey;
-		border-left: 1px solid grey;
+
+
+	tei-ref {
+		color: #5f0000;
+		text-decoration: underline;
+		cursor: pointer;
 	}
-	tei-unclear {
-		background-color: mistyrose;
+
+	tei-seg {
+		outline: 1px solid transparent;
 	}
 
 
 
-/* end of class */
-
-}
+}  	/* end of the class */
 
 
-/* to be considered */
-/* 
-
-tei-add[place=above] {
-  vertical-align: super;
-}
-tei-add[place=inline]:before {
-  content: "";
-}
-tei-add[place=inline]:after {
-  content: "";
-}
-tei-add[place=below] {
-  vertical-align: sub;
-}
-tei-cb {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-tei-cb:before {
-  content: "[column break]";
-}
-tei-emph {
-  font-style: italic;
-}
-tei-explicit {
-  font-style: italic;
-}
-tei-figure {
-		display: none;
-}
-
-*/
 
 

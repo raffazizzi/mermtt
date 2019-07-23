@@ -1,6 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
 
-/* unclear why this is not tei-tei? */
+/*  All elements are included. Empty rules are set for selectors that have no rules in common across the project  */
+
+/* GDB to RV: I'm unclear about this is not tei-tei or .Tei - Must have something to do with JS? */
+
 .Tei {
   margin: 0;
   padding: 0;
@@ -15,19 +18,33 @@
 }
 
 
-/*  ALL ELEMENTS USED are included. */
-/* Empty rules are set for selectors that have no common rule across the project  */
+/*  LAYOUT and divisions */
 
-tei-am { /* Empty Rule */	}
-
-tei-author {
-	font-weight:bold;
-	display: block;
-	margin: .5em 0 1em 0;
+tei-TEI {
+  display: block;
 }
 
-	/*not used yet */
-tei-back {
+tei-text {
+  display: block;
+  line-height: 1.5;
+  padding-left: 2em;
+}
+
+tei-body {
+	display:block;   
+	}
+
+tei-div  {  
+	display:block;  
+	}
+
+tei-p {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+tei-back {      /*not used yet */
   display: block;
   margin-top: 35px;
   background-color: #FFFFFF;
@@ -39,82 +56,110 @@ tei-back {
   font-size: 12pt;
 }
 
-tei-body {
-	display:block;   
-	}
 
-tei-char {  
-	display:none;  
-	}
+/*  HEADER   */
 
-tei-charDecl {  
-	display:none;  
-	}
-
-tei-choice {  
-	display:inline;  
-	}
-
-tei-corr { /* Empty Rule */	}
-
-tei-desc  {  
-	display:none;  
-	}
-
-tei-div  {  
-	display:block;  
-	}
-
-tei-encodingDesc {
-  display: none;
+tei-teiHeader {
+  display: block; 
+  margin: 0 0 2em 1.2em;
+  padding: 1em;
+  border-bottom: 1px solid grey;
+  background-color: #eee;
 }
 
-tei-ex { /* Empty Rule */	}
-tei-expan { /* Empty Rule */	}
-tei-g { /* Empty Rule */	}
 
-tei-gi {  
-	display:none;  
-	}
+/* fileDesc: titleStmt */
 
-tei-glyph {  
-	display:none;  
-	}
-
-tei-glyphName {  
-	display:none;  
-	}
-
-tei-graphic { /* Empty Rule */	}
-tei-label { /* Empty Rule */	}
-tei-lb { /* Empty Rule */	}
-
+tei-fileDesc {
+  display: block;
+}
+tei-titleStmt {  
+	display:block;
+}
+tei-titleStmt > tei-title {
+  	display: block;
+	font-family: Arvo, sans-serif;
+	font-size: 120%;
+}
+tei-author {
+	display: block;
+	font-family: Arvo, sans-serif;
+	font-size: 90%;
+	margin: .4em 0 1em 0;
+}
+tei-respStmt {
+  display: none;
+}
+tei-resp {  
+	display:inline;
+}
 tei-name {  
 	display:inline;  
 	}
 
-tei-notatedMusic { /* Empty Rule */	}
 
-tei-note {  
-	display:none;  
-	}
-
-tei-orig { /* Empty Rule */	}
-
-tei-p {
-  display: block;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  text-align: justify;
-}
-
-tei-pb 	{ /* Empty Rule */	}
+/* fileDesc: publicationStmt */
 
 tei-publicationStmt {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  display: none;
 }
+
+
+/* encodingDesc */
+
+tei-encodingDesc {
+  display: none;
+}
+tei-charDecl {  
+	display:none; 
+}
+tei-glyph {  
+	display:inline;  
+}
+tei-glyphName {  
+	display:inline;  
+}
+tei-char {  
+	display:inline;
+	font-weight:bold;
+}
+tei-desc  {  
+	display:inline;  
+}
+tei-note {  
+	display:none;  
+}
+tei-gi {  
+	display:inline;  
+}
+
+
+/* tagsDecl */
+
+tei-tagsDecl {  
+	display:none; 
+}
+tei-tagsDecl tei-rendition {  
+	display:none;
+}
+
+
+
+/* TEXT DETAILS */
+
+tei-am { /* Empty Rule */ }
+tei-c { /* Empty Rule */ }
+tei-choice { /* Empty Rule */ }
+tei-corr { /* Empty Rule */	}
+tei-ex { /* Empty Rule */	}
+tei-expan { /* Empty Rule */	}
+tei-g { /* Empty Rule */	}
+tei-graphic { /* Empty Rule */	}
+tei-label { /* Empty Rule */	}
+tei-lb { /* Empty Rule */	}
+tei-orig { /* Empty Rule */	}
+tei-notatedMusic { /* Empty Rule */	}
+tei-pb 	{ /* Empty Rule */	}
 
 tei-ref {
   color: #5f0000;
@@ -124,61 +169,18 @@ tei-ref {
 
 tei-reg { /* Empty Rule */	}
 
-tei-rendition {  
-	display:inline;
-}
-
-tei-resp {  
-	display:inline;
-}
-
-tei-respStmt {
-  display: block;
-}
-
 tei-seg {
   outline: 1px solid transparent;
 }
 
 tei-sic { /* Empty Rule */	}
-
-
-tei-sourceDesc {
-  display: none;
-}
-
 tei-supplied { /* Empty Rule */	}
-
-tei-TEI {
-  display: block;
-}
-
-tei-teiHeader {
-  display: block; 
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border-bottom: 1px solid Grey;
-}
-
 tei-term { /* Empty Rule */	}
 
-tei-text {
-  display: block;
-  line-height: 1.5;
-  padding-left: 2em;
-}
 
-tei-titleStmt {  
-	display:block;
-}
 
-tei-titleStmt > tei-title {
-  display: block;
-  font-family: Arvo, sans-serif;
-  font-weight: normal;
-  font-weight: bold !important;
-  font-size: 150%;
-}
+
+
 
 
 
