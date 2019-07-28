@@ -6,7 +6,7 @@
 /*  HEADER   */      
 
 	tei-respStmt {
-		font-size:90%;
+		font-size:80%;
 		display:block;
 		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d3c723+0,eeeeee+0,d3c723+100 */
 		background: rgb(211,199,35); /* Old browsers */
@@ -19,7 +19,7 @@
 		display:none;
 	}
 	tei-respStmt tei-name::before {
-		content: 'Diplomatic edition by ';
+		content: 'Diplomatic transcription by ';
 	}
 
 

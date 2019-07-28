@@ -5,7 +5,7 @@
 /*  HEADER   */      
 
 	tei-respStmt {
-		font-size:90%;
+		font-size:80%;
 		display:block;
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1ca1a5+0,eeeeee+0,1ca1a5+100 */
 background: rgb(28,161,165); /* Old browsers */
@@ -19,8 +19,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ca1a5', end
 		display:none;
 	}
 	tei-respStmt tei-name::before {
-		content: 'Diplomatic edition by ';
-color:red;
+		content: 'Diplomatic transcription by ';
+
 	}
 
 
