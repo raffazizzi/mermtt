@@ -62,7 +62,7 @@ tei-back {      /*not used yet */
 tei-teiHeader {
   display: block; 
   margin: 0 0 2em 1.2em;
-  padding: 1em;
+  padding: 1em 0 1em 1em;
   border-bottom: 1px solid grey;
   background-color: #eee;
 }
@@ -153,6 +153,7 @@ tei-choice { /* Empty Rule */ }
 tei-corr { /* Empty Rule */	}
 tei-ex { /* Empty Rule */	}
 tei-expan { /* Empty Rule */	}
+tei-facs { /* Empty Rule */	}
 tei-g { /* Empty Rule */	}
 tei-graphic { /* Empty Rule */	}
 tei-label { /* Empty Rule */	}

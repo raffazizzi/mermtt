@@ -3,7 +3,25 @@
 
 /*  LAYOUT and divisions */   /* none */
 
-/*  HEADER   */      /* none */
+/*  HEADER   */      
+
+	tei-respStmt {
+		font-size:90%;
+		display:block;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d3c723+0,eeeeee+0,d3c723+100 */
+		background: rgb(211,199,35); /* Old browsers */
+		background: -moz-linear-gradient(left,  rgba(211,199,35,1) 0%, rgba(238,238,238,1) 0%, rgba(211,199,35,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(211,199,35,1) 0%,rgba(238,238,238,1) 0%,rgba(211,199,35,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(211,199,35,1) 0%,rgba(238,238,238,1) 0%,rgba(211,199,35,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3c723', endColorstr='#d3c723',GradientType=1 ); /* IE6-9 */
+	}
+	tei-respStmt tei-resp {
+		display:none;
+	}
+	tei-respStmt tei-name::before {
+		content: 'Diplomatic edition by ';
+	}
+
 
 /* TEXT DETAILS */
 
@@ -112,7 +130,7 @@
 		background-color:mistyrose;
 		content: " ♫ "
 	}
-	tei-notatedMusic ref:hover {
+	tei-notatedMusic ref::hover {
 		color:black;
 	}
 	tei-notatedMusic ref seg {
@@ -121,6 +139,9 @@
 	}
 
 	tei-graphic { 
+		display:inline;
+	}
+	tei-pb tei-facs { 
 		display:inline;
 	}
 

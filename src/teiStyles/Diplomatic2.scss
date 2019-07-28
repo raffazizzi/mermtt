@@ -1,6 +1,176 @@
 .Diplomatic2 {
-    tei-TEI {
-        background-color: blue;
-    }
-}
 
+/*  LAYOUT and divisions */   /* none */
+
+/*  HEADER   */      
+
+	tei-respStmt {
+		font-size:90%;
+		display:block;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1ca1a5+0,eeeeee+0,1ca1a5+100 */
+background: rgb(28,161,165); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(28,161,165,1) 0%, rgba(238,238,238,1) 0%, rgba(28,161,165,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(28,161,165,1) 0%,rgba(238,238,238,1) 0%,rgba(28,161,165,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(28,161,165,1) 0%,rgba(238,238,238,1) 0%,rgba(28,161,165,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ca1a5', endColorstr='#1ca1a5',GradientType=1 ); /* IE6-9 */
+
+	}
+	tei-respStmt tei-resp {
+		display:none;
+	}
+	tei-respStmt tei-name::before {
+		content: 'Diplomatic edition by ';
+color:red;
+	}
+
+
+
+
+/* TEXT DETAILS */
+
+
+	tei-pb {
+		color: gray;
+		text-align: left;
+		text-indent: -3em;
+		font-size: 80%;
+		float: left;
+	}
+	tei-pb::before {
+		content: "\00a0" attr(n);
+		padding: .1em 0 .1em 0;
+		margin-top: .1em;
+		border-top: 1px solid grey;
+		border-left: 1px solid grey;
+	}
+
+	tei-c[type=dropcap]	{
+		float: left;
+	}
+
+
+	tei-choice tei-corr {
+		display:none;
+	}
+	tei-choice tei-sic {
+		display:inline;
+	}
+	tei-choice tei-orig {
+		display:inline;
+	}
+	tei-choice tei-reg {
+		display:none;
+	}
+
+	tei-supplied { 
+		display:none;
+	}
+
+	tei-g { 
+		display:inline;
+	}
+
+	tei-abbr {
+		display:none;
+	}
+	tei-am {
+		display:none;
+	}
+	tei-ex {
+		display: inline;
+	}
+	tei-ex::before {
+		content: "(";
+	}
+	tei-ex::after {
+		content: ")";
+	}
+
+
+	tei-expan {
+		display: inline;
+	}
+
+	
+	tei-unclear {
+		background-color: mistyrose;
+	}
+
+
+	tei-lb {
+		color:black;
+	}
+	tei-lb:after {
+		content: '\a';
+		white-space: pre;
+	}
+	tei-lb[type="hyphen"]::before {
+		content: " -";
+		display:inline;
+		letter-spacing: -.2em;
+	}
+	tei-lb[type="wronghyphen"]::before {
+		content: " -";
+		display:inline;
+		letter-spacing: -.1em;
+	}
+
+	tei-term { 
+		display:inline
+	}
+
+
+
+
+	tei-notatedMusic {
+		padding: 0;
+		font-size:12px;
+		font-family: courier, fixed, monospace;
+	}
+	tei-notatedMusic::before {
+		text-align:left;
+		font-size: 22px;
+		content: '\1D11A \1D11A \1D11A \1D11A  ';
+	}
+	tei-notatedMusic label {
+		padding:0 30px 0 10px;
+	}
+	tei-notatedMusic ref {
+		color:white;
+		font-size:11px;
+	}
+	tei-notatedMusic ref::before {
+		color:black;
+		font-size:16px;
+		background-color:mistyrose;
+		content: " ♫ "
+	}
+	tei-notatedMusic ref::hover {
+		color:black;
+	}
+	tei-notatedMusic ref seg {
+		font-weight:bold;
+		text-decoration:underline;
+	}
+
+	tei-graphic { 
+		display:inline;
+	}
+	tei-pb tei-facs { 
+		display:inline;
+	}
+
+
+	tei-ref {
+		color: #5f0000;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	tei-seg {
+		outline: 1px solid transparent;
+	}
+
+
+
+}  	/* end of the class */
