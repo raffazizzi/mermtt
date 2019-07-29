@@ -1,33 +1,33 @@
-@import url('http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Gentium+Book+Basic:400,400italic,700,700italic');
+@import url('http://fonts.googleapis.com/css?family=Lato|Vollkorn|Cardo');
 
-/*  All elements are included. Empty rules are set for selectors that have no rules in common across the project  */
+/*  All elements used in the TEI are included. Empty rules are set for selectors that have no rules in common across the project  */
 
 /* GDB to RV: I'm unclear about this is not tei-tei or .Tei - Must have something to do with JS? */
 
 .Tei {
-  margin: 0;
-  padding: 0;
-  margin-left: 2em;
-  margin-right: 4em;
-  padding: 2.5em;
-  font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
-  font-size: 12pt; 
-  background-color: #fff; 
-  color: #292929;
-  width: 42em; 
+	margin: 0;
+	padding:0;
+	padding-left: 0em;
+	margin-right: 4em;
+	font-family: Vollkorn, Cardo, Serif; 
+	font-size: 12pt; 
+	background-color: #fff; 
+	color: #000;
+	width: 42em; 
 }
 
 
 /*  LAYOUT and divisions */
 
 tei-TEI {
-  display: block;
-}
+	display: block;
+	
+  }
 
 tei-text {
   display: block;
   line-height: 1.5;
-  padding-left: 2em;
+  padding-left: 6em;
 }
 
 tei-body {
@@ -42,7 +42,9 @@ tei-p {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
+	
 }
+
 
 tei-back {      /*not used yet */
   display: block;
@@ -61,10 +63,9 @@ tei-back {      /*not used yet */
 
 tei-teiHeader {
   display: block; 
-  margin: 0 0 2em 1.2em;
-  padding: 1em 0 1em 1em;
-  border-bottom: 1px solid grey;
-  background-color: #eee;
+  margin: 1em 0 3em 0;
+  padding: 1em 0 0 6em;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 
@@ -78,24 +79,29 @@ tei-titleStmt {
 }
 tei-titleStmt > tei-title {
   	display: block;
-	font-family: Arvo, sans-serif;
-	font-size: 120%;
+	font-family: Lato;
+	font-size: 125%;
 }
 tei-author {
 	display: block;
-	font-family: Arvo, sans-serif;
-	font-size: 90%;
-	margin: .4em 0 1em 0;
+	font-family: Lato;
+	font-size: 95%;
+	margin: .4em 0 2em 0;
 }
+
 tei-respStmt {
-  display: none;
-}
-tei-resp {  
-	display:inline;
-}
-tei-name {  
-	display:inline;  
+	display:none;
 	}
+
+
+/* fileDesc: editionStmt */
+
+tei-editionStmt {
+  display: block;
+  font-family: Lato;
+  font-size: 85%;
+  padding-right: .1em;
+}
 
 
 /* fileDesc: publicationStmt */
@@ -103,6 +109,17 @@ tei-name {
 tei-publicationStmt {
   display: none;
 }
+
+/* fileDesc: sourceDesc */
+
+tei-sourceDesc {
+	display:block;
+	font-family: Lato;
+	font-size: 70%;	
+	margin: 2em 0 0 0;
+	padding: .2em .1em .2em 0;
+	}
+
 
 
 /* encodingDesc */

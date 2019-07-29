@@ -5,40 +5,51 @@
 
 /*  HEADER   */      
 
-	tei-respStmt {
-		font-size:80%;
-		display:block;
-		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d3c723+0,eeeeee+0,d3c723+100 */
-		background: rgb(211,199,35); /* Old browsers */
-		background: -moz-linear-gradient(left,  rgba(211,199,35,1) 0%, rgba(238,238,238,1) 0%, rgba(211,199,35,1) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(left,  rgba(211,199,35,1) 0%,rgba(238,238,238,1) 0%,rgba(211,199,35,1) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right,  rgba(211,199,35,1) 0%,rgba(238,238,238,1) 0%,rgba(211,199,35,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3c723', endColorstr='#d3c723',GradientType=1 ); /* IE6-9 */
+	tei-sourceDesc {
+	margin-left: -8.5em;
+
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eeeeee+0,eeeeee+35,cecaa5+65,d1c975+100 */
+background: rgb(238,238,238); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 35%, rgba(206,202,165,1) 65%, rgba(209,201,117,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 35%,rgba(206,202,165,1) 65%,rgba(209,201,117,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 35%,rgba(206,202,165,1) 65%,rgba(209,201,117,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#d1c975',GradientType=1 ); /* IE6-9 */
+
+
 	}
-	tei-respStmt tei-resp {
+	
+tei-sourceDesc::after {
+		content: 'Diplomatic transcription (with abbreviations)';
+	}
+
+	tei-sourceDesc tei-bibl {
 		display:none;
 	}
-	tei-respStmt tei-name::before {
-		content: 'Diplomatic transcription by ';
+
+/* TEXT FONT important! */
+
+	tei-body * tei-p {
+		font-family: Cardo;
+		font-size: 1.1em;
 	}
 
-
-/* TEXT DETAILS */
+/* TEXT STYLING */
 
 
 	tei-pb {
-		color: gray;
+		color: darkgrey;
 		text-align: left;
-		text-indent: -3em;
-		font-size: 80%;
+		text-indent: -6em;
+		line-height: 3.2em;
+		font-size: 11px;
 		float: left;
+		font-family: "Courier New";
 	}
 	tei-pb::before {
 		content: "\00a0" attr(n);
-		padding: .1em 0 .1em 0;
-		margin-top: .1em;
-		border-top: 1px solid grey;
-		border-left: 1px solid grey;
+		padding: .7em .1em .1em .1em;
+		border-top: 1px solid darkgrey;
+		border-left: 1px solid darkgrey;
 	}
 
 	tei-c[type=dropcap]	{
@@ -68,7 +79,7 @@
 	}
 	tei-am {
 		display:inline;
-	}
+		}
 	tei-ex {
 		display: none;
 	}
@@ -83,9 +94,10 @@
 
 
 	tei-lb {
+		display:inline;
 		color:black;
 	}
-	tei-lb:after {
+	tei-lb::after {
 		content: '\a';
 		white-space: pre;
 	}

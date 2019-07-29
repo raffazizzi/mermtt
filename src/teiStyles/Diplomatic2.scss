@@ -4,29 +4,27 @@
 
 /*  HEADER   */      
 
-	tei-respStmt {
-		font-size:80%;
-		display:block;
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1ca1a5+0,eeeeee+0,1ca1a5+100 */
-background: rgb(28,161,165); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(28,161,165,1) 0%, rgba(238,238,238,1) 0%, rgba(28,161,165,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(28,161,165,1) 0%,rgba(238,238,238,1) 0%,rgba(28,161,165,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(28,161,165,1) 0%,rgba(238,238,238,1) 0%,rgba(28,161,165,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ca1a5', endColorstr='#1ca1a5',GradientType=1 ); /* IE6-9 */
+	tei-sourceDesc {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9f9f9+0,f9f9f9+30,ea7227+100 */
+background: rgb(249,249,249); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(249,249,249,1) 0%, rgba(249,249,249,1) 30%, rgba(234,114,39,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(249,249,249,1) 0%,rgba(249,249,249,1) 30%,rgba(234,114,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(249,249,249,1) 0%,rgba(249,249,249,1) 30%,rgba(234,114,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ea7227',GradientType=1 ); /* IE6-9 */
 
-	}
-	tei-respStmt tei-resp {
-		display:none;
 	}
 	tei-respStmt tei-name::before {
-		content: 'Diplomatic transcription by ';
-
+		content: 'Diplomatic transcription ';
 	}
 
+/* TEXT FONT important! */
 
+	tei-body * tei-p {
+		font-family: Cardo;
+	}
 
+/* TEXT STYLING */
 
-/* TEXT DETAILS */
 
 
 	tei-pb {
@@ -98,6 +96,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ca1a5', end
 
 
 	tei-lb {
+		display:inline;
 		color:black;
 	}
 	tei-lb:after {

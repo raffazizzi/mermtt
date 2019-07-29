@@ -16,13 +16,18 @@
                    <name>Giuliano Di Bacco</name>
                 </respStmt>
             </titleStmt>
-            <publicationStmt>
-                <p></p>
-            </publicationStmt>
-            <sourceDesc><p/>
-            </sourceDesc>
+            <publicationStmt><p>Previously Unpublished. Digitally born.</p></publicationStmt>
+            <sourceDesc><bibl>MS Arezzo, Biblioteca della Città, 216, fols. 36r-39v</bibl></sourceDesc>
         </fileDesc>
         <encodingDesc>
+            <projectDesc>
+            <p>Part of the Earliest Music Treatises in Vernacular Italian project. This file presents the text in four distinct versions:</p>
+            <ab n="dipl">Diplomatic transcription (with abbreviations)</ab>
+            <ab n="dipl2">Diplomatic transcription (abbreviations)</ab>
+            <ab n="edit">Edition</ab>
+            <ab n="mod">Modernized</ab>
+            </projectDesc>
+            
             <charDecl>                   <!-- ignora questi che sono provvisori -->
                 
                 <glyph n="aOL">
@@ -50,34 +55,41 @@
                 <char><desc>&#x2013;</desc></char>
             </charDecl>
             <tagsDecl>
-                <!-- Rendition: specific to THIS text only -->
 
-                <rendition xml:id="bold" n="teibp:bold" scheme="css">
+                <!-- Rendition: values specific to THIS text -->
+
+                <rendition xml:id="bold"  scheme="css">
                     font-weight: bold;
                 </rendition>
 
-                <rendition xml:id="blue" n="teibp:blue" scheme="css">
+                <rendition xml:id="blue" scheme="css">
                     color:#00d;
                 </rendition>
                 
-                <rendition xml:id="darkyel" n="teibp:darkyel" scheme="css">
+                <rendition xml:id="darkyel" scheme="css">
                     color:#cea608;
                 </rendition>
 
-                <rendition xml:id="dropcap-hi2" n="teibp:dropcap-hi2" scheme="css">
+                <rendition xml:id="dropcap-hi2" scheme="css">
                     font-size: 60px;
                     line-height: 45px;
-                    padding-top: 0;
-                    padding-right: 8px;
+                    padding-top: 5px;
+                    padding-right: 10px;
                     padding-left: 0;
+                    margin-left: -4px;
                 </rendition>
                 
-                <rendition xml:id="cap-hi0-left" n="teibp:cap-hi0-left" scheme="css">
-                    font-size:120%; line-height: 115%; letter-spacing: .05em;
+                <rendition xml:id="cap-hi0-left" scheme="css">
+                    font-size:120%; 
+                    line-height: 115%; 
+                    letter-spacing: .05em;
                 </rendition>
                 
                 <rendition xml:id="cap-hi0-mid" n="teibp:cap-hi0-mid" scheme="css">
-                    font-size:120%; line-height: 115%; letter-spacing: .05em; margin-left:.5em;
+                    font-size:120%; 
+                    line-height: 115%; 
+                    letter-spacing: .05em; 
+                    margin-left:.5em;
                 </rendition>
   
             </tagsDecl>
@@ -181,6 +193,7 @@
     <figure><graphic url="#" n="36v02"></graphic></figure><!--url="../images/Ar216-36v-01.jpg"-->
 </p>
      </div>
-    </body>
+        
+        </body>
   </text>
 </TEI>
