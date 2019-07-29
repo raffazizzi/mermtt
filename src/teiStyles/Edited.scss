@@ -1,20 +1,19 @@
 .Edited {
 
-/*  LAYOUT and divisions */   /* none */
 
-/*  HEADER   */      
+/*  LAYOUT and main divisions */   
+			
+	/* no changes here */
 
-	tei-respStmt {
-		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9f9f9+0,f9f9f9+30,4d979b+100 */
-background: rgb(249,249,249); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(249,249,249,1) 0%, rgba(249,249,249,1) 30%, rgba(77,151,155,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(249,249,249,1) 0%,rgba(249,249,249,1) 30%,rgba(77,151,155,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(249,249,249,1) 0%,rgba(249,249,249,1) 30%,rgba(77,151,155,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#4d979b',GradientType=1 ); /* IE6-9 */
-}
-	tei-respStmt tei-name::before {
-		content: 'Modern edition ';
-	}
+
+/*  HEADER   */    
+
+	/*  fake selector bar */
+
+	tei-projectDesc tei-list tei-item[n='ed1'] {
+		background: #aeeeee;
+	}	
+
 
 
 
@@ -26,7 +25,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	}
 
 	tei-c[type=dropcap]	{
-		display:inline;
+		display:none;
 	}
 
 
@@ -72,7 +71,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 	tei-supplied::before {
 		content: "[";
 	}
-	supplied::after {
+	tei-supplied::after {
 		content: "]";
 	}
 	tei-supplied[n] {

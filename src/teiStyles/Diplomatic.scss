@@ -1,37 +1,27 @@
 .Diplomatic {
 
 
-/*  LAYOUT and divisions */   /* none */
-
-/*  HEADER   */      
-
-	tei-sourceDesc {
-	margin-left: -8.5em;
-
-		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#eeeeee+0,eeeeee+35,cecaa5+65,d1c975+100 */
-background: rgb(238,238,238); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 35%, rgba(206,202,165,1) 65%, rgba(209,201,117,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 35%,rgba(206,202,165,1) 65%,rgba(209,201,117,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 35%,rgba(206,202,165,1) 65%,rgba(209,201,117,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#d1c975',GradientType=1 ); /* IE6-9 */
+/*  LAYOUT and main divisions */   
+			
+	/* no changes here */
 
 
-	}
-	
-tei-sourceDesc::after {
-		content: 'Diplomatic transcription (with abbreviations)';
-	}
+/*  HEADER   */    
 
-	tei-sourceDesc tei-bibl {
-		display:none;
-	}
+	/*  fake selector bar */
 
-/* TEXT FONT important! */
+	tei-projectDesc tei-list tei-item[n='dipl1'] {
+		background: #ffdab9;
+	}	
+
+
+/* == FONT for the TEXT  !important! == */
 
 	tei-body * tei-p {
 		font-family: Cardo;
-		font-size: 1.1em;
+		font-size: 1em;
 	}
+
 
 /* TEXT STYLING */
 
@@ -112,12 +102,7 @@ tei-sourceDesc::after {
 		letter-spacing: -.1em;
 	}
 
-	tei-term { 
-		display:inline
-	}
-
-
-
+	
 
 	tei-notatedMusic {
 		padding: 0;

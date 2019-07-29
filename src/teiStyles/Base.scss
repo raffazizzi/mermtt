@@ -1,8 +1,10 @@
 @import url('http://fonts.googleapis.com/css?family=Lato|Vollkorn|Cardo');
 
-/*  All elements used in the TEI are included. Empty rules are set for selectors that have no rules in common across the project  */
+/*  All elements used in the TEI document are included. Empty rules are set for selectors that have no rules to set in common across the project  */
 
-/* GDB to RV: I'm unclear about this is not tei-tei or .Tei - Must have something to do with JS? */
+
+
+/* GDB to RV: I'm unclear about the following. Must have something to do with JS? */
 
 .Tei {
 	margin: 0;
@@ -13,63 +15,27 @@
 	font-size: 12pt; 
 	background-color: #fff; 
 	color: #000;
-	width: 42em; 
+	width: 45em; 
 }
 
 
-/*  LAYOUT and divisions */
+/*  == TEI DOCUMENT ==  */
 
 tei-TEI {
 	display: block;
-	
-  }
-
-tei-text {
-  display: block;
-  line-height: 1.5;
-  padding-left: 6em;
-}
-
-tei-body {
-	display:block;   
-	}
-
-tei-div  {  
-	display:block;  
-	}
-
-tei-p {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-	
 }
 
 
-tei-back {      /*not used yet */
-  display: block;
-  margin-top: 35px;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #292929;
-  border-top: 2px solid #cdcdcd;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  line-height: 16px;
-  font-size: 12pt;
-}
-
-
-/*  HEADER   */
+/*  == TEI HEADER ==  */
 
 tei-teiHeader {
   display: block; 
-  margin: 1em 0 3em 0;
+  margin: 1em 0 2em 0;
   padding: 1em 0 0 6em;
-  border-bottom: 1px solid #d6d6d6;
 }
 
 
-/* fileDesc: titleStmt */
+/* = fileDesc/titleStmt = */
 
 tei-fileDesc {
   display: block;
@@ -77,12 +43,12 @@ tei-fileDesc {
 tei-titleStmt {  
 	display:block;
 }
-tei-titleStmt > tei-title {
+tei-titleStmt tei-title {
   	display: block;
 	font-family: Lato;
 	font-size: 125%;
 }
-tei-author {
+tei-titleStmt tei-author {
 	display: block;
 	font-family: Lato;
 	font-size: 95%;
@@ -93,62 +59,91 @@ tei-respStmt {
 	display:none;
 	}
 
+tei-name { /* Empty Rule */ }
 
-/* fileDesc: editionStmt */
+
+/* = fileDesc/editionStmt = */
 
 tei-editionStmt {
-  display: block;
-  font-family: Lato;
-  font-size: 85%;
-  padding-right: .1em;
-}
-
-
-/* fileDesc: publicationStmt */
-
-tei-publicationStmt {
   display: none;
 }
 
-/* fileDesc: sourceDesc */
+
+/* = fileDesc/publicationStmt = */
+
+tei-publicationStmt {
+  display:none;
+}
+
+
+/* fileDesc/sourceDesc */
 
 tei-sourceDesc {
 	display:block;
+}
+
+tei-sourceDesc tei-bibl {
 	font-family: Lato;
-	font-size: 70%;	
-	margin: 2em 0 0 0;
-	padding: .2em .1em .2em 0;
+	font-size: 80%;	
+	margin: 1em 0 0 0;
+	}
+
+tei-sourceDesc tei-bibl::before {
+	content: '📖';
+	padding-right:10px !important;
 	}
 
 
+tei-sourceDesc::after {             /*  fake expand button */
+	display:block;
+	float:right;
+	padding-right:30px !important;
+	font-weight:bold;
+	font-size: 75%;
+	content: '[ + ]';
+	}
 
 /* encodingDesc */
 
 tei-encodingDesc {
-  display: none;
+	display: block;
+	margin-left:-6em;       /*  fake style selector bar */
 }
-tei-charDecl {  
+
+tei-projectDesc  {
+	display:block;
+	margin-top: 2em;     /*  fake style selector bar */
+}
+
+tei-projectDesc tei-p {
+	display:none;
+}
+
+tei-projectDesc tei-list {      /*  fake selector bar */
+	font-family: Lato;
+	display:table-row;
+	font-size:15px;
+}
+
+tei-projectDesc tei-list tei-item {     /*  fake selector bar */
+	display:table-cell;
+	text-align:center;
+	width:160px;
+	padding: .2em 1em .2em 1em;
+	border: 1px solid #ccc;
+	font-size:75%;
+	background:#f8f8ff;
+}
+
+tei-charDecl {
 	display:none; 
 }
-tei-glyph {  
-	display:inline;  
-}
-tei-glyphName {  
-	display:inline;  
-}
-tei-char {  
-	display:inline;
-	font-weight:bold;
-}
-tei-desc  {  
-	display:inline;  
-}
-tei-note {  
-	display:none;  
-}
-tei-gi {  
-	display:inline;  
-}
+tei-glyph {  /* Empty Rule */ }
+tei-glyphName  {  /* Empty Rule */ }
+tei-char  {  /* Empty Rule */ }
+tei-char tei-desc   {  /* Empty Rule */ }
+tei-char tei-note  {  /* Empty Rule */ }
+tei-gi  {  /* Empty Rule */ }
 
 
 /* tagsDecl */
@@ -162,7 +157,33 @@ tei-tagsDecl tei-rendition {
 
 
 
-/* TEXT DETAILS */
+
+/*  TEI TEXT: Layout of main divisions */
+
+
+tei-text {
+	display: block;
+	line-height: 1.5;
+	padding-left: 6em;
+}
+
+tei-body {
+	display:block;   
+}
+
+tei-div  {  
+	display:block;  
+}
+
+tei-p {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+/* textual DETAILS */
 
 tei-am { /* Empty Rule */ }
 tei-c { /* Empty Rule */ }
@@ -197,6 +218,20 @@ tei-term { /* Empty Rule */	}
 
 
 
+/* TEI BACK */
+/*not in use yet */
+
+tei-back {      		
+  display: block;
+  margin-top: 35px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #292929;
+  border-top: 2px solid #cdcdcd;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  line-height: 16px;
+  font-size: 12pt;
+}
 
 
 

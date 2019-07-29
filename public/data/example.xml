@@ -6,26 +6,40 @@
     xmlns:math="http://www.w3.org/1998/Math/MathML"
     xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:html="http://www.w3.org/1999/xhtml">
+    
     <teiHeader>
+        
         <fileDesc>
             <titleStmt>
                 <title>Nota che due sono le prolationi di canto figurato</title>
                 <author>Anonymous</author>
                 <respStmt>
                     <resp>Diplomatic transcription and modern edition by</resp>
-                   <name>Giuliano Di Bacco</name>
+                    <name>Giuliano Di Bacco</name>
                 </respStmt>
             </titleStmt>
-            <publicationStmt><p>Previously Unpublished. Digitally born.</p></publicationStmt>
-            <sourceDesc><bibl>MS Arezzo, Biblioteca della Città, 216, fols. 36r-39v</bibl></sourceDesc>
+            <editionStmt>
+                    <p>Previously unpublished. Digitally born document.</p>
+            </editionStmt>
+            <publicationStmt>
+                <p> </p>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>MS Arezzo, Biblioteca della Città, 216, fols. 36r-39v</bibl>
+            </sourceDesc>
         </fileDesc>
+        
         <encodingDesc>
             <projectDesc>
-            <p>Part of the Earliest Music Treatises in Vernacular Italian project. This file presents the text in four distinct versions:</p>
-            <ab n="dipl">Diplomatic transcription (with abbreviations)</ab>
-            <ab n="dipl2">Diplomatic transcription (abbreviations)</ab>
-            <ab n="edit">Edition</ab>
-            <ab n="mod">Modernized</ab>
+                <p>Part of <bibl><title>The Earliest Music Treatises in Vernacular Italian</title> project</bibl>. The text of this treatise, previously unpublished, is presented in four versions</p>
+                <ab type="viewslist">
+                    <list>
+                    <item n="dipl1">Diplomatic transcription 1</item>
+                    <item n="dipl2">Diplomatic transcription 2</item>
+                    <item n="ed1">Edition 1</item>
+                    <item n="ed2">Edition 2</item>
+                    </list>
+                </ab>
             </projectDesc>
             
             <charDecl>                   <!-- ignora questi che sono provvisori -->
@@ -67,12 +81,12 @@
                 </rendition>
                 
                 <rendition xml:id="darkyel" scheme="css">
-                    color:#cea608;
+                    color:#daa520;
                 </rendition>
 
                 <rendition xml:id="dropcap-hi2" scheme="css">
                     font-size: 60px;
-                    line-height: 45px;
+                    line-height: 42px;
                     padding-top: 5px;
                     padding-right: 10px;
                     padding-left: 0;
@@ -80,12 +94,14 @@
                 </rendition>
                 
                 <rendition xml:id="cap-hi0-left" scheme="css">
+                    font-family: Palatino, Georgia;
                     font-size:120%; 
                     line-height: 115%; 
                     letter-spacing: .05em;
                 </rendition>
                 
                 <rendition xml:id="cap-hi0-mid" n="teibp:cap-hi0-mid" scheme="css">
+                    font-family: Palatino, Georgia;
                     font-size:120%; 
                     line-height: 115%; 
                     letter-spacing: .05em; 
