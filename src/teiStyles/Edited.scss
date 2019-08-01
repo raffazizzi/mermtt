@@ -1,5 +1,182 @@
 .Edited {
-    tei-TEI {
-        background-color: green;
+
+
+/*  LAYOUT and main divisions */   
+			
+	/* no changes here */
+
+
+/*  HEADER   */    
+
+	/*  fake selector bar */
+
+	tei-projectDesc tei-list tei-item[n='ed1'] {
+		background: #aeeeee;
+	}	
+
+
+
+
+/* TEXT STYLING */
+
+
+	tei-pb {
+		display:none;
+	}
+
+	tei-c[type=dropcap]	{
+		display:none;
+	}
+
+
+	tei-choice tei-corr {
+		display:inline;
+		border-bottom: 1px dotted red;
+	}
+  	tei-choice tei-corr::before  {
+		display:inline;
+		content:'‹';
+	}
+	tei-choice tei-corr::after  {
+		display:inline;
+		content:'›';
+	}
+	tei-choice tei-sic {
+		display:none;
+	}
+
+	tei-choice tei-orig {
+		display:none;
+	}
+	tei-choice[n=opt] tei-orig {
+		display:inline;
+	}
+	tei-choice tei-reg {
+		display:inline;
+	}
+	tei-choice[n="opt"] tei-reg[type="mod"] {
+		display:none;
+	}
+	tei-choice[n=nest] tei-choice tei-reg {
+		display:inline;
+  	}  
+	tei-choice[n=nest] tei-choice tei-reg[type=mod] {
+		display:none;
+		}
+
+
+	tei-supplied { 
+		display:inline;
+	}	
+	tei-supplied::before {
+		content: "[";
+	}
+	tei-supplied::after {
+		content: "]";
+	}
+	tei-supplied[n] {
+		display:inline;
     }
-}
+	tei-supplied[n]::before {
+		content:"";
+    }
+	tei-supplied[n]::after {
+		content:"";
+    }
+	tei-supplied[n=sp] {
+	display:inline;
+    }
+
+
+
+	tei-g { 
+		display:inline;
+	}
+
+	tei-abbr {
+		display:none;
+	}
+	tei-am {
+		display:none;
+	}
+	tei-ex {
+		display: inline;
+	}
+	tei-expan {
+		display: inline;
+	}
+
+	
+	tei-unclear {
+		color:blue;
+		background-color: #cdcdcd;}
+	}
+
+
+	tei-lb {
+		display:none;
+	}
+
+	tei-term { 
+		display:inline;
+		border-bottom:1px dotted green;
+	}
+	tei-term::hover {
+		border-bottom:1px solid green;
+		background-color:lightgrey;
+	}
+
+
+
+	tei-notatedMusic {
+		padding: 0;
+		font-size:12px;
+		font-family: courier, fixed, monospace;
+	}
+	tei-notatedMusic::before {
+		text-align:left;
+		font-size: 22px;
+		content: '\1D11A \1D11A \1D11A \1D11A  ';
+	}
+	tei-notatedMusic label {
+		padding:0 30px 0 10px;
+	}
+	tei-notatedMusic ref {
+		color:white;
+		font-size:11px;
+	}
+	tei-notatedMusic ref::before {
+		color:black;
+		font-size:16px;
+		background-color:mistyrose;
+		content: " ♫ "
+	}
+	tei-notatedMusic ref::hover {
+		color:black;
+	}
+	tei-notatedMusic ref seg {
+		font-weight:bold;
+		text-decoration:underline;
+	}
+
+	tei-graphic { 
+		display:inline;
+	}
+	tei-pb tei-facs { 
+		display:inline;
+	}
+
+
+	tei-ref {
+		color: #5f0000;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	tei-seg {
+		outline: 1px solid transparent;
+	
+
+
+
+}  /* end of the class */  	
