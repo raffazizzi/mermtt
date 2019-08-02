@@ -6,100 +6,117 @@
     xmlns:math="http://www.w3.org/1998/Math/MathML"
     xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:html="http://www.w3.org/1999/xhtml">
+    
     <teiHeader>
+        
         <fileDesc>
             <titleStmt>
                 <title>Nota che due sono le prolationi di canto figurato</title>
                 <author>Anonymous</author>
                 <respStmt>
-                    <resp>Edited by</resp>
-				<name>Giuliano Di Bacco <!-- <span rendition="#sup">1</span> -->  </name> 
+                    <resp>Diplomatic transcription and modern edition by</resp>
+                    <name>Giuliano Di Bacco</name>
                 </respStmt>
             </titleStmt>
+            <editionStmt>
+                    <p>Previously unpublished. Digitally born document.</p>
+            </editionStmt>
             <publicationStmt>
-                <p></p>
+                <p> </p>
             </publicationStmt>
-            <sourceDesc><p/>
+            <sourceDesc>
+                <bibl>MS Arezzo, Biblioteca della Città, 216, fols. 36r-39v</bibl>
             </sourceDesc>
         </fileDesc>
+        
         <encodingDesc>
-            <charDecl>
-                <glyph xml:id="amacron"><desc>Small Latin A with macron. Needed when in an abbreviation formed by two letters and combined characters do not work (css or js?) requiring a hack</desc></glyph>
-                <glyph xml:id="qmacron"><desc>Small Latin Q with macron. The combined sequence of characters doesn't work (css or js?) and requires a hack</desc></glyph>
-                <glyph xml:id="mmacron"><desc>Small Latin M with macron. The combined sequence of characters doesn't work (css or js?) and requires a hack</desc></glyph>
-                <glyph xml:id="nmacron"><desc>Small Latin N with macron. The combined sequence of characters doesn't work (css or js?) and requires a hack</desc></glyph>
+            <projectDesc>
+                <p>Part of <bibl><title>The Earliest Music Treatises in Vernacular Italian</title> project</bibl>. The text of this treatise, previously unpublished, is presented in four versions</p>
+                <ab type="viewslist">
+                    <list>
+                    <item n="dipl1">Diplomatic transcription 1</item>
+                    <item n="dipl2">Diplomatic transcription 2</item>
+                    <item n="ed1">Edition 1</item>
+                    <item n="ed2">Edition 2</item>
+                    </list>
+                </ab>
+            </projectDesc>
+            
+            <charDecl>                   <!-- ignora questi che sono provvisori -->
+                
+                <glyph n="aOL">
+                    <glyphName>LATIN SMALL LETTER A (COMBINED) WITH OVERLINE</glyphName>
+					<desc>'Latin Small Letter A' (U+0061) + 'Combininig Overline' (U+0305). Needed in abbreviations.</desc>
+				</glyph>
+                <glyph n="qOL">
+                    <glyphName>LATIN SMALL LETTER Q (COMBINED) WITH OVERLINE</glyphName>
+					<desc>'Latin Small Letter Q' (U+0071) + 'Combininig Overline' (U+0305). Needed in abbreviations.</desc>
+				</glyph>
+                <glyph n="mOL">
+                    <glyphName>LATIN SMALL LETTER M (COMBINED) WITH OVERLINE</glyphName>
+					<desc>'Latin Small Letter M' (U+006D) + 'Combininig Overline' (U+0305). Needed in abbreviations.</desc>
+				</glyph>
+                <glyph xml:id="nOL">
+					<glyphName>LATIN SMALL LETTER N (COMBINED) WITH OVERLINE</glyphName>
+					<desc>'Latin Small Letter N' (U+006E)+ 'Combininig Overline' (U+0305). Needed in abbreviations.</desc>
+				</glyph>
+                <char n="sp"><desc>Unicode 'SPACE' (U+0020) = '&#x20;'. </desc><note>Used when editorially supplied (element <gi>supplied</gi>). Note that the space is also found combined with other chars.</note></char>
+                <char n="hST"><desc>Unicode 'LATIN SMALL LETTER H WITH STROKE' (U+0127) = '&#x127;'. </desc><note>Abbreviation marker (used in element <gi>am</gi>)</note></char>
+                <char n="pST"><desc>Unicode 'LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER' (U+A751) = '&#xA751;'. </desc><note>Abbreviation marker (used used in element <gi>am</gi>)</note></char>
+                <char><desc>&#x101;</desc></char>
+                <char><desc>&#x204a;</desc></char>
+                <char><desc>&#x2071;</desc></char>
+                <char><desc>&#x2013;</desc></char>
             </charDecl>
             <tagsDecl>
-                <!-- Text formatting -->
 
-                <rendition xml:id="block" n="teibp:block" scheme="css">
-                    display: block;
-                </rendition>
+                <!-- Rendition: values specific to THIS text -->
 
-                <rendition xml:id="centered" n="teibp:centered" scheme="css">
-                    text-align: center;
-                </rendition>
-
-                <rendition xml:id="bold" n="teibp:bold" scheme="css">
+                <rendition xml:id="bold"  scheme="css">
                     font-weight: bold;
                 </rendition>
 
-                <rendition xml:id="red" n="teibp:red" scheme="css">
-                    color:#903;
-                </rendition>
-                
-                <rendition xml:id="blue" n="teibp:blue" scheme="css">
+                <rendition xml:id="blue" scheme="css">
                     color:#00d;
                 </rendition>
                 
-                <rendition xml:id="darkyel" n="teibp:darkyel" scheme="css">
-                    color:#cea608;
+                <rendition xml:id="darkyel" scheme="css">
+                    color:#daa520;
                 </rendition>
-                
-                <rendition xml:id="bg-linen" n="teibp:bg-linen" scheme="css">
-                    background-color:linen;
-                </rendition>                
-                                
-                <rendition xml:id="sup" n="teibp:sup" scheme="css">
-                    vertical-align: super; font-size: .8em;
-                </rendition>
-                
-                <rendition xml:id="smaller" n="teibp:smaller" scheme="css">
-                    font-size: 75%;
-                </rendition>
-                
-                <rendition xml:id="dropcap-hi2" n="teibp:dropcap-hi2" scheme="css">
+
+                <rendition xml:id="dropcap-hi2" scheme="css">
                     font-size: 60px;
-                    line-height: 45px;
-                    padding-top: 0;
-                    padding-right: 8px;
+                    line-height: 42px;
+                    padding-top: 5px;
+                    padding-right: 10px;
                     padding-left: 0;
+                    margin-left: -4px;
                 </rendition>
                 
-                <rendition xml:id="cap-hi0-left" n="teibp:cap-hi0-left" scheme="css">
-                    font-size:120%; line-height: 115%; letter-spacing: .05em;
+                <rendition xml:id="cap-hi0-left" scheme="css">
+                    font-family: Palatino, Georgia;
+                    font-size:120%; 
+                    line-height: 115%; 
+                    letter-spacing: .05em;
                 </rendition>
                 
                 <rendition xml:id="cap-hi0-mid" n="teibp:cap-hi0-mid" scheme="css">
-                    font-size:120%; line-height: 115%; letter-spacing: .05em; margin-left:.5em;
+                    font-family: Palatino, Georgia;
+                    font-size:120%; 
+                    line-height: 115%; 
+                    letter-spacing: .05em; 
+                    margin-left:.5em;
                 </rendition>
-                
-               <!-- not in use 
-                    <rendition xml:id="neg-indent" n="teibp:neg-indent" scheme="css">
-                    float:left; text-indent:-0.8em;
-                </rendition>
-               -->
-                           
+  
             </tagsDecl>
         </encodingDesc>
     </teiHeader>
     <text>
         <body>
-            
             <div>
-<pb n="36r"/>
+<pb n="36r" facs="../images/Ar206-36r.jpg"/>
 <p>
-    <choice><orig><c type="dropcap" source="#Ar216" rendition="#dropcap-hi2 #blue">N</c><c type="cap" source="#Ar216" rendition="#cap-hi0-left #darkyel #bold">O</c>ta</orig><reg>Nota</reg></choice> 
+    <choice><orig><c type="dropcap" rendition="#dropcap-hi2 #blue">N</c><c type="cap" rendition="#cap-hi0-left #darkyel #bold">O</c>ta</orig><reg>Nota</reg></choice> 
     c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> due sono le<supplied n="sp">&#x20;</supplied>prolationi 
     di <choice n="opt"><orig>ch<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>to</orig><reg type="mod">canto</reg></choice> figurato 
     <choice><orig>cioe</orig><reg>cioè</reg></choice> <choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice><lb break="no" type="hyphen"/>fecto 
@@ -108,7 +125,7 @@
     minore<choice n="pc"><orig>:</orig><reg>.</reg></choice> <choice><orig>ecci</orig><reg><term type="lin">Ecci</term></reg></choice> molti che 
     <lb/><choice n="opt"><orig>dichono</orig><reg type="mod">dicono</reg></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> le 
     sono quatro<choice n="pc"><orig>:</orig><reg>,</reg></choice> 
-    <choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-mid #darkyel #bold">C</c>ioe</orig><reg>cioè</reg></choice> 
+    <choice><orig><c type="cap" rendition="#cap-hi0-mid #darkyel #bold">C</c>ioe</orig><reg>cioè</reg></choice> 
     <choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>fecto minore <choice><am>&#x204a;</am><ex>et</ex></choice> 
     in<choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>fecto minore<supplied n="pc">,</supplied> 
     <lb/><choice><am>&#x204a;</am><ex>et</ex></choice> <choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>fecto 
@@ -117,14 +134,14 @@
     medesima<choice n="pc"><orig>:</orig><reg type="exp"></reg></choice> 
     <lb/>chosa <choice><orig><choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice></orig><reg>perché</reg></choice> 
     tutto torna a<supplied n="sp">&#x20;</supplied>uno effecto<choice n="pc"><orig>:</orig><reg>.</reg></choice>
-    <choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-mid #darkyel #bold">T</c>orniamo</orig><reg>Torniamo</reg></choice> 
+    <choice><orig><c type="cap" rendition="#cap-hi0-mid #darkyel #bold">T</c>orniamo</orig><reg>Torniamo</reg></choice> 
     alla <choice><am>p&#x2071;</am><expan>p<ex>r</ex>i</expan></choice>ma 
     <choice><am>&#xA751;</am><expan>p<ex>ar</ex></expan></choice>te <supplied n="pcsp">&#x2013;</supplied> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> 
     <lb/>due sono le<supplied n="sp">&#x20;</supplied>prolationi: magiore <choice><am>&#x204a;</am><ex>et</ex></choice> minore <supplied>o</supplied>
     <choice><sic><choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>fecto</sic><corr>perfecta</corr></choice> 
     <choice><am>&#x204a;</am><ex>et</ex></choice>
     <choice><sic>in<choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>fecto</sic><corr>inperfecta</corr></choice><choice n="pc"><orig>:</orig><reg>.</reg></choice> 
-    <lb/><choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-left #darkyel #bold">E</c>t</orig><reg>Et</reg></choice> queste prolationi sono
+    <lb/><choice><orig><c type="cap" rendition="#cap-hi0-left #darkyel #bold">E</c>t</orig><reg>Et</reg></choice> queste prolationi sono
     sotto <choice n="nest"><orig>assei</orig><choice><reg>a &#183;ssei</reg><reg type="mod">a sei</reg></choice></choice> note: 
     <choice><am>&#x204a;</am><ex>et</ex></choice> <choice><am n="hack"><g corresp="#qmacron" n="hack">q</g>&#x304;</am><expan>q<ex>ue</ex></expan></choice>ste sono 
     max<choice><am>&#x12b;</am><expan>i<ex>m</ex></expan></choice>a<supplied n="pc">,</supplied> 
@@ -135,19 +152,21 @@
     <choice n="opt"><orig>simiminima</orig><reg type="mod">semiminima</reg></choice><choice n="pc"><orig>:</orig><reg>,</reg></choice> 
     e<supplied n="sp">&#x20;</supplied>questi sono
     <lb/>
-<pb n="36v"/>
+<pb n="36v" facs="../images/Ar206-36r.jpg"/>
     e<supplied n="apsp">&#x2019;&#x20;</supplied>nomi loro<supplied n="pc">;</supplied> ora 
     resta a<supplied n="sp">&#x20;</supplied><choice><orig>uedere</orig><reg>vedere</reg></choice> 
     <choice n="opt"><orig>chome</orig><reg type="mod">come</reg></choice> sono figurate: 
     <choice><orig>L</orig><reg>l</reg></choice><supplied n="ap">&#x2019;</supplied>ex<choice><am>&#x113;</am><expan>e<ex>m</ex></expan></choice>plo 
     loro<choice n="pc"><orig>:-</orig><reg>:</reg></choice><lb/>
-    <notatedMusic n="nm01ex01" place="below" type="full-width">
-        <label><choice><orig>[Exemplum 1]</orig><reg>[Example 1]</reg></choice></label><ref>Ar216-36v-01 <seg>mei</seg>|<seg>jpg</seg></ref>
+    <notatedMusic n="nm01ex01">
+        <ptr target="ex01.mei"/>
+        <graphic url="../images/ex01.jpg"/>
+        <label>[Example 1]</label>
     </notatedMusic>
-    <figure><graphic url="#" n="36v01"></graphic></figure><!--url="../images/Ar216-36v-01.jpg"-->
+    
 </p>
 <p>
-    <choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-left #darkyel #bold">Q</c>ueste</orig><reg>Queste</reg></choice> figurate si figurano 
+    <choice><orig><c type="cap" rendition="#cap-hi0-left #darkyel #bold">Q</c>ueste</orig><reg>Queste</reg></choice> figurate si figurano 
     in questa forma <choice n="opt"><orig>chome</orig><reg type="mod">come</reg></choice> <choice><orig>uedi</orig><reg>vedi</reg></choice> nello 
     <lb/>exemplo di<supplied n="sp">&#x20;</supplied>sopra<supplied n="pc">;</supplied> ma p<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ssonsi 
     legare insieme <choice n="opt"><orig>ch<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice></orig><reg type="mod">con</reg></choice> altre 
@@ -162,7 +181,7 @@
     <lb/><choice><orig>m</orig><reg>M</reg></choice>inime <choice><am>&#x204a;</am><ex>et</ex></choice> 
     <choice n="opt"><orig>simiminime</orig><reg type="mod">semiminime</reg></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> 
     si<supplied n="sp">&#x20;</supplied>possono <term type="lin">trasfigurare</term> <choice n="opt"><orig>chome</orig><reg type="mod">come</reg></choice> 
-    a<choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>t<choice><am n="hack1"><g corresp="#amacron" n="hack1">a</g>&#x305;</am><am n="hack2"><g corresp="#mmacron" n="hack2">m</g>&#x305;</am><expan>am<ex>en</ex></expan></choice><lb break="no" type="hyphen"/>te 
+    a<choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice>t<choice><am><g corresp="#amacron">a</g>&#x305;</am><am><g corresp="#mmacron">m</g>&#x305;</am><expan>am<ex>en</ex></expan></choice><lb break="no" type="hyphen"/>te 
     <choice><am>&#xA751;</am><expan>p<ex>er</ex></expan></choice> lo ex<choice><am>&#x113;</am><expan>e<ex>m</ex></expan></choice>plo 
     <choice><orig>uedrai</orig><reg>vedrai</reg></choice><supplied n="pc">;</supplied> <choice><am>&#x204a;</am><ex>et</ex></choice> 
     <supplied>che</supplied> molte figure sono c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> sono 
@@ -174,7 +193,7 @@
     tr<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>sfigurare c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> 
     <lb/>sono di<supplied n="sp">&#x20;</supplied>loro natura gr<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>de 
     <choice><am>&#x204a;</am><ex>et</ex></choice> giuste<choice n="pc"><orig>:</orig><reg>.</reg></choice> 
-    <choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-mid #darkyel #bold">E</c>cci</orig><reg><term type="lin">Ecci</term></reg></choice> molte 
+    <choice><orig><c type="cap" rendition="#cap-hi0-mid #darkyel #bold">E</c>cci</orig><reg><term type="lin">Ecci</term></reg></choice> molte 
     note <choice n="opt"><orig>leghate</orig><reg type="mod">legate</reg></choice> 
     <lb/>insieme c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> 
     <choice><am n="hack1"><g corresp="#qmacron" n="hack1">q</g>&#x304;</am><am n="hack2"><g corresp="#nmacron" n="hack2">n</g>&#x304;</am><expan>q<ex>ua</ex>n</expan><ex>do</ex></choice> 
@@ -182,21 +201,18 @@
     di<supplied n="sp">&#x20;</supplied>quadre sagli<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>do 
     s<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>ça <choice n="opt"><orig>cho<lb break="no" type="hyphen"/>da</orig><reg type="mod">coda</reg></choice> 
     alcuna<supplied n="pc">,</supplied> tutte sono <choice><orig>breui</orig><reg>brevi</reg></choice><choice n="sp"><orig>:</orig><reg>.</reg></choice> 
-    <choice><orig><c type="cap" source="#Ar216" rendition="#cap-hi0-mid #darkyel #bold">E</c>t</orig><reg>Et</reg></choice> 
+    <choice><orig><c type="cap" rendition="#cap-hi0-mid #darkyel #bold">E</c>t</orig><reg>Et</reg></choice> 
     <choice><am n="hack1"><g corresp="#qmacron" n="hack1">q</g>&#x304;</am><am n="hack2"><g corresp="#nmacron" n="hack2">n</g>&#x304;</am><expan>q<ex>ua</ex>n</expan><ex>do</ex></choice> 
     tu <choice><orig>trouassi</orig><reg>trovassi</reg></choice> similm<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>te 
-<choice n="opt"><orig>altre<lb break="no" type="hyphen"/>t<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>te</orig><reg type="mod">altrettante</reg></choice> note c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> salissino <choice><am>&#x204a;</am><ex>et</ex></choice> sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>dessino o quadre o<supplied n="sp">&#x20;</supplied>bislu<ex>n</ex>ghe <choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice>tro<supplied> ’</supplied>l<supplied n="sp">&#x20;</supplied><choice><orig>me<lb break="no" type="hyphen"/>ço</orig></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> la<supplied></supplied>prima <choice><am>&#x204a;</am><ex>et</ex></choice> l<supplied>’</supplied><choice><sic>utima</sic><corr>ultima</corr></choice> sieno quadre <choice><am>&#x204a;</am><ex>et</ex></choice> s<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>ça <choice><orig>choda</orig><reg>coda</reg></choice><choice n="pc"><orig>:</orig><reg>,</reg></choice> <choice><am>&#x204a;</am><ex>et</ex></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice><lb break="no" type="hyphen"/>d<choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice>o <choice><am>&#x204a;</am><ex>et</ex></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> sagghino<supplied n="pc">,</supplied> s<choice><am>&#x113;</am><expan>e<ex>m</ex></expan></choice>pre la p<ex>ri</ex>ma <choice><am>&#x204a;</am><ex>et</ex></choice> l<supplied>’</supplied><choice><sic>utima</sic><corr>ultima</corr></choice> sono l<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe: <choice><am>&#x204a;</am><ex>et</ex></choice> tutte <lb/>l<supplied>’</supplied>altre del meço sono <choice><orig>breui</orig><reg>brevi</reg></choice>: <choice><am>&#x204a;</am><ex>et</ex></choice> <choice><orig>anchora</orig><reg>ancora</reg></choice> <choice><orig>ui</orig><reg>vi</reg></choice> poteresti nel meço <choice><orig>troua<lb break="no" type="hyphen"/>re</orig></choice> alcuna maxima<choice n="pc"><orig>:</orig><reg>.</reg></choice> <choice><orig>Anchora</orig><reg>ancora</reg></choice> q<ex>ua</ex>n<ex>do</ex> tu <choice><orig>trouassi</orig><reg>trovassi</reg></choice> due note sole sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice><lb break="no" type="hyphen"/>d<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>do <choice><am>&#x204a;</am><ex>et</ex></choice> quadre<supplied n="pc">,</supplied> sono tutte due l<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe <choice><am>&#x204a;</am><ex>et</ex></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> <choice><orig>habino</orig><reg>abbino</reg></choice> <choice><orig>choda</orig><reg>coda</reg></choice><choice n="pc"><orig>:</orig><reg>.</reg></choice> Item <lb/>q<ex>ua</ex>n<ex>do</ex> tu <choice><orig>trouassi</orig><reg>trovassi</reg></choice> due note bisl<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe <choice><am>&#x204a;</am><ex>et</ex></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> quadre <choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice> questa forma: <lb/><notatedMusic place="inline" n="2"><label>Ar216_36v_ex02 mei|jpg</label></notatedMusic><figure><graphic url="#" n="2"></graphic></figure><lb/>   
-<lb/><lb/> <p> </p><p> </p></p>
-    
-    
-
-    
-    
-            </div>
-
-
+<choice n="opt"><orig>altre<lb break="no" type="hyphen"/>t<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>te</orig><reg type="mod">altrettante</reg></choice> note c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> salissino <choice><am>&#x204a;</am><ex>et</ex></choice> sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>dessino o quadre o<supplied n="sp">&#x20;</supplied>bislu<ex>n</ex>ghe <choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice>tro<supplied> ’</supplied>l<supplied n="sp">&#x20;</supplied><choice><orig>me<lb break="no" type="hyphen"/>ço</orig></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> la<supplied></supplied>prima <choice><am>&#x204a;</am><ex>et</ex></choice> l<supplied>’</supplied><choice><sic>utima</sic><corr>ultima</corr></choice> sieno quadre <choice><am>&#x204a;</am><ex>et</ex></choice> s<choice><am>&#x101;</am><expan>a<ex>n</ex></expan></choice>ça <choice><orig>choda</orig><reg>coda</reg></choice><choice n="pc"><orig>:</orig><reg>,</reg></choice> <choice><am>&#x204a;</am><ex>et</ex></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice><lb break="no" type="hyphen"/>d<choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice>o <choice><am>&#x204a;</am><ex>et</ex></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> sagghino<supplied n="pc">,</supplied> s<choice><am>&#x113;</am><expan>e<ex>m</ex></expan></choice>pre la p<ex>ri</ex>ma <choice><am>&#x204a;</am><ex>et</ex></choice> l<supplied>’</supplied><choice><sic>utima</sic><corr>ultima</corr></choice> sono l<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe: <choice><am>&#x204a;</am><ex>et</ex></choice> tutte <lb/>l<supplied>’</supplied>altre del meço sono <choice><orig>breui</orig><reg>brevi</reg></choice>: <choice><am>&#x204a;</am><ex>et</ex></choice> <choice><orig>anchora</orig><reg>ancora</reg></choice> <choice><orig>ui</orig><reg>vi</reg></choice> poteresti nel meço <choice><orig>troua<lb break="no" type="hyphen"/>re</orig></choice> alcuna maxima<choice n="pc"><orig>:</orig><reg>.</reg></choice> <choice><orig>Anchora</orig><reg>ancora</reg></choice> q<ex>ua</ex>n<ex>do</ex> tu <choice><orig>trouassi</orig><reg>trovassi</reg></choice> due note sole sc<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice><lb break="no" type="hyphen"/>d<choice><am>&#x113;</am><expan>e<ex>n</ex></expan></choice>do <choice><am>&#x204a;</am><ex>et</ex></choice> quadre<supplied n="pc">,</supplied> sono tutte due l<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe <choice><am>&#x204a;</am><ex>et</ex></choice> c<choice><am>&#x127;</am><expan>h<ex>e</ex></expan></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> <choice><orig>habino</orig><reg>abbino</reg></choice> <choice><orig>choda</orig><reg>coda</reg></choice><choice n="pc"><orig>:</orig><reg>.</reg></choice> Item <lb/>q<ex>ua</ex>n<ex>do</ex> tu <choice><orig>trouassi</orig><reg>trovassi</reg></choice> due note bisl<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice>ghe <choice><am>&#x204a;</am><ex>et</ex></choice> n<choice><am>&#x14d;</am><expan>o<ex>n</ex></expan></choice> quadre <choice><am>&#x12b;</am><expan>i<ex>n</ex></expan></choice> questa forma: <lb/>
+    <notatedMusic n="nm01ex02">
+        <ptr target="ex01.mei"/>
+        <graphic url="../images/ex01.jpg"/>
+        <label>[Example 2]</label>
+    </notatedMusic>
+</p>
+     </div>
+        
         </body>
-       <back/>
-
-    </text>
+  </text>
 </TEI>
