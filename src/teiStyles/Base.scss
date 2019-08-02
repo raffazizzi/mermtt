@@ -181,7 +181,18 @@ tei-p {
   margin-bottom: 0;
 }
 
-
+/* notated music */
+tei-notatedMusic {
+	display: block;
+	padding: 0;
+	margin: 1em 0;
+	font-size:12px;
+	font-family: courier, fixed, monospace;
+	
+	tei-label::before {
+		content: '\1D11A \1D11A  ';
+	}
+}
 
 /* textual DETAILS */
 

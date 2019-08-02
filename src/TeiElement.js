@@ -1,4 +1,5 @@
 import React from 'react'
+import Music from './Music'
 
 class TeiElement extends React.Component {
   forwardTeiAttributes() {
@@ -9,16 +10,15 @@ class TeiElement extends React.Component {
   }
 
   render() {
-    const teiChildren = Array.from(this.props.teiDomElement.childNodes).map((teiEl, i) => {
+    // Special case for notatedMusic
+    if (this.props.teiDomElement.tagName.toLowerCase() === 'tei-notatedmusic') {
+      return <Music notatedMusic={this.props.teiDomElement}/>
+    } 
+
+    const teiChildren = Array.from(this.props.teiDomElement.childNodes).map((teiEl, i) => { 
       switch (teiEl.nodeType) {
         case 1:
-          return <TeiElement 
-            teiDomElement={teiEl}
-            key={`${teiEl.tagName}_${i}`}
-            dataType={this.props.dataType}              
-            getContextChapter={this.props.getContextChapter}
-            clearContextChapter={this.props.clearContextChapter}
-            />
+          return <TeiElement teiDomElement={teiEl} key={`${teiEl.tagName}_${i}`} />
         case 3:
           return teiEl.nodeValue
         default:
@@ -26,7 +26,7 @@ class TeiElement extends React.Component {
       }        
     })
 
-    return React.createElement(this.props.teiDomElement.tagName, 
+    return React.createElement(this.props.teiDomElement.tagName.toLowerCase(), 
       {
         ...this.forwardTeiAttributes(),
       }, 

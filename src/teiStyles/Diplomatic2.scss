@@ -113,40 +113,41 @@
 	}
 
 
-	tei-notatedMusic {
-		padding: 0;
-		font-size:12px;
-		font-family: courier, fixed, monospace;
-	}
-	tei-notatedMusic::before {
-		text-align:left;
-		font-size: 22px;
-		content: '\1D11A \1D11A \1D11A \1D11A  ';
-	}
-	tei-notatedMusic label {
-		padding:0 30px 0 10px;
-	}
-	tei-notatedMusic ref {
-		color:white;
-		font-size:11px;
-	}
-	tei-notatedMusic ref::before {
-		color:black;
-		font-size:16px;
-		background-color:mistyrose;
-		content: " ♫ "
-	}
-	tei-notatedMusic ref::hover {
-		color:black;
-	}
-	tei-notatedMusic ref seg {
-		font-weight:bold;
-		text-decoration:underline;
-	}
+	// RV commented out, hanlded in JS
+	// tei-notatedMusic {
+	// 	padding: 0;
+	// 	font-size:12px;
+	// 	font-family: courier, fixed, monospace;
+	// }
+	// tei-notatedMusic::before {
+	// 	text-align:left;
+	// 	font-size: 22px;
+	// 	content: '\1D11A \1D11A \1D11A \1D11A  ';
+	// }
+	// tei-notatedMusic label {
+	// 	padding:0 30px 0 10px;
+	// }
+	// tei-notatedMusic ref {
+	// 	color:white;
+	// 	font-size:11px;
+	// }
+	// tei-notatedMusic ref::before {
+	// 	color:black;
+	// 	font-size:16px;
+	// 	background-color:mistyrose;
+	// 	content: " ♫ "
+	// }
+	// tei-notatedMusic ref::hover {
+	// 	color:black;
+	// }
+	// tei-notatedMusic ref seg {
+	// 	font-weight:bold;
+	// 	text-decoration:underline;
+	// }
 
-	tei-graphic { 
-		display:inline;
-	}
+	// tei-graphic { 
+	// 	display:inline;
+	// }
 	tei-pb tei-facs { 
 		display:inline;
 	}

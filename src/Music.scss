@@ -1,0 +1,18 @@
+.MusicTabs {
+
+  padding-bottom: 1em;
+
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px;
+  }
+  a {
+    color: inherit;
+    padding: 4px;
+  }
+
+  .MTabActive {
+    background-color: #ccc;
+  }
+}
