@@ -1,5 +1,6 @@
 import React from 'react'
 import CETEI from 'CETEIcean'
+import TeiElement from './TeiElement'
 import './teiStyles/Base.scss'
 import './teiStyles/Diplomatic.scss'
 import './teiStyles/Diplomatic2.scss'
@@ -10,7 +11,6 @@ class Tei extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.teiDataContainer = React.createRef()
     this.allowedViews = this.props.allowedViews.map(view => {
       return view.url
     })
@@ -32,24 +32,16 @@ class Tei extends React.Component {
     })
   }
 
-  componentDidUpdate() {
-    if (this.state.teiData) {
-      this.renderTei()
-    }
-  }
-
-  renderTei() {
-    this.teiDataContainer.current.innerHTML = ''
-    this.teiDataContainer.current.appendChild(this.state.teiData)
-  }
-
   render() {
     let view = this.props.defaultView
     if (this.allowedViews.indexOf(this.props.view) > -1) {
       view = this.props.view
     }
+    const teiContent = this.state.teiData 
+      ? <TeiElement teiDomElement={this.state.teiData} />
+      : 'Loading ...' 
     const viewStyle = view.charAt(0).toUpperCase() + view.substr(1).toLowerCase()
-    return <div className={`Tei ${viewStyle}`} ref={this.teiDataContainer}>Loading...</div>
+    return <div className={`Tei ${viewStyle}`}>{teiContent}</div>
   }
 }
 
