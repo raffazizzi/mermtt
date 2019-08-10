@@ -6,9 +6,7 @@ import './Music.scss'
 class Music extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      show: 'svg'
-    }
+    this.state = { }
   }
 
   componentDidMount() {
@@ -24,44 +22,45 @@ class Music extends React.Component {
 
   async renderMusic(url) {
     const meiData = await fetch(`data/${url}`).then(response => response.text())
+
+    // This is an example
+    const type = this.props.notatedMusic.getAttribute('type')
+    let pageWidth = 800
+    if (type === 'tipo1') {
+      pageWidth = 400
+    } else if (type === 'tipo2') {
+      pageWidth = 100
+    }
+
     Verovio.loadData(meiData)
     Verovio.setOptions({
-      pageWidth: 800,
+      pageWidth,
       adjustPageHeight: true,
       scale: 50
     })
     this.setState({meiData, svg: Verovio.renderPage(1)}) 
   }
 
-  show(type) {
-    this.setState({show: type})
-  }
-
   render() {
     const url = this.props.notatedMusic.querySelector('tei-ptr').getAttribute('target')
     const label = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-label')} />
     let music = ''
-    if (this.state.svg && this.state.show === 'svg') {
-      music = <div dangerouslySetInnerHTML={{__html: this.state.svg}}/>
-    } else if (this.state.show === 'jpg') {
+    // If there is a tei-graphic element, then show the image, otherwise render with Verovio.
+    const image = this.props.notatedMusic.querySelector('tei-graphic')
+    if (image) {
       music = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-graphic')} />
+    } else if (this.state.svg) {
+      music = <div dangerouslySetInnerHTML={{__html: this.state.svg}}/>
     }
-    const eActive = this.state.show === 'svg' ? 'MTabActive' : ''
-    const fActive = this.state.show === 'jpg' ? 'MTabActive' : ''
-    const tabs = (<div className="MusicTabs">
-      {label}&nbsp;
-      <span onClick={() => this.show('svg')} className={eActive}>Engraved</span> |&nbsp;
-      <span onClick={() => this.show('jpg')} className={fActive}>Facsimile</span> |&nbsp;
-      <a href={`data/${url}`}>MEI</a>
+    const header = (<div className="MusicHeader">
+      {label} &nbsp; <a href={`data/${url}`}>MEI</a>
     </div>)
+    const children = (<>{header}{music}</>)
     return React.createElement(this.props.notatedMusic.tagName.toLowerCase(), 
       {
         ...this.forwardTeiAttributes(),
       }, 
-      [
-        tabs,
-        music
-      ]
+      children
     )
   }
 }
