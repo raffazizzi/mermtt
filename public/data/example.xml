@@ -160,7 +160,6 @@
     loro<choice n="pc"><orig>:-</orig><reg>:</reg></choice><lb/>
     <notatedMusic n="nm01ex01">
         <ptr target="ex01.mei"/>
-        <graphic url="../images/ex01.jpg"/>
         <label>[Example 1]</label>
     </notatedMusic>
     
