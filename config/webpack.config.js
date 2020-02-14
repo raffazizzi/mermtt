@@ -158,7 +158,7 @@ module.exports = function(webpackEnv) {
       //   ? 'static/js/[name].[contenthash:8].js'
       //   : isEnvDevelopment && 'static/js/bundle.js',
       filename: isEnvProduction
-        ? 'static/js/[name].js'
+        ? 'static/js/mermtt-viewer.js'
         : isEnvDevelopment && 'static/js/bundle.js',
       // TODO: remove this when upgrading to webpack 5
       futureEmitAssets: true,
@@ -167,7 +167,7 @@ module.exports = function(webpackEnv) {
       //   ? 'static/js/[name].[contenthash:8].chunk.js'
       //   : isEnvDevelopment && 'static/js/[name].chunk.js',
       chunkFilename: isEnvProduction
-        ? 'static/js/[name].js'
+        ? 'static/js/mermtt-viewer.js'
         : isEnvDevelopment && 'static/js/[name].js',
       // We inferred the "public path" (such as / or /my-project) from homepage.
       // We use "/" in development.
@@ -486,31 +486,14 @@ module.exports = function(webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
-      new HtmlWebpackPlugin(
-        Object.assign(
-          {},
-          {
-            inject: true,
-            template: paths.appHtml,
-          },
-          isEnvProduction
-            ? {
-                minify: {
-                  removeComments: true,
-                  collapseWhitespace: true,
-                  removeRedundantAttributes: true,
-                  useShortDoctype: true,
-                  removeEmptyAttributes: true,
-                  removeStyleLinkTypeAttributes: true,
-                  keepClosingSlash: true,
-                  minifyJS: true,
-                  minifyCSS: true,
-                  minifyURLs: true,
-                },
-              }
-            : undefined
-        )
-      ),
+      isEnvDevelopment
+      ? new HtmlWebpackPlugin(
+        {
+          filename: 'index.html',
+          inject: true,
+          template: paths.appHtml,
+        }
+      ) : undefined,
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       isEnvProduction &&
@@ -550,7 +533,7 @@ module.exports = function(webpackEnv) {
           // both options are optional
           // filename: 'static/css/[name].[contenthash:8].css',
           // chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-          filename: 'static/css/[name].css',
+          filename: 'static/css/mermtt-viewer.css',
         }),
       // Generate a manifest file which contains a mapping of all asset filenames
       // to their corresponding output file so that tools can pick it up without

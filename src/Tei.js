@@ -26,7 +26,7 @@ class Tei extends React.Component {
     // Override default CETEI TEI behaviors.
     ct.addBehavior('tei', 'teiHeader', undefined)
 
-    const teiData = await ct.getHTML5('data/example.xml')
+    const teiData = await ct.getHTML5(`/data/${this.props.tei}`)
     this.setState({
       teiData
     })

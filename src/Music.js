@@ -21,7 +21,7 @@ class Music extends React.Component {
   }
 
   async renderMusic(url) {
-    const meiData = await fetch(`data/${url}`).then(response => response.text())
+    const meiData = await fetch(`/data/${url}`).then(response => response.text())
 
     // This is an example
     const type = this.props.notatedMusic.getAttribute('type')
@@ -53,7 +53,7 @@ class Music extends React.Component {
       music = <div dangerouslySetInnerHTML={{__html: this.state.svg}}/>
     }
     const header = (<div className="MusicHeader">
-      {label} &nbsp; <a href={`data/${url}`}>MEI</a>
+      {label} &nbsp; <a href={`/data/${url}`}>MEI</a>
     </div>)
     const children = (<>{header}{music}</>)
     return React.createElement(this.props.notatedMusic.tagName.toLowerCase(), 
