@@ -3,7 +3,7 @@
     "main.css": "./static/css/mermtt-viewer.css",
     "main.js": "./static/js/mermtt-viewer.js",
     "main.js.map": "./static/js/mermtt-viewer.js.map",
-    "precache-manifest.8cc8440bd82d442c8112a6f8eae952f2.js": "./precache-manifest.8cc8440bd82d442c8112a6f8eae952f2.js",
+    "precache-manifest.09b0f30ab845a8ed6b0b42754ac0424f.js": "./precache-manifest.09b0f30ab845a8ed6b0b42754ac0424f.js",
     "service-worker.js": "./service-worker.js",
     "static/css/mermtt-viewer.css.map": "./static/css/mermtt-viewer.css.map"
   }
